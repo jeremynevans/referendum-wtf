@@ -1,3 +1,19 @@
+body {
+  font-family: Lato, sans-serif;
+  background: #f8f8f8; }
+.navbar-inverse {
+  background-color: #003399;
+  border: none; }
+  .navbar li.logo {
+    font-size: 1.6em;
+    font-weight: 300; }
+    .navbar li.logo a {
+      color: white; }
+      .navbar li.logo a:hover {
+        color: #ffcc01; }
+      .navbar li.logo .glyphicon {
+        font-size: 0.8em;
+        color: #ffcc01; }
 .jumbotron {
   font-family: Lato, sans-serif;
   background: #003399;
@@ -16,7 +32,7 @@
     max-width: 75%;
     margin: 1em auto 2em; }
   .navbar + .jumbotron {
-    margin-top: -20px; }
+    margin-top: -60px; }
   .jumbotron .lang-logo {
     display: block;
     background: #B01302;
@@ -28,3 +44,16 @@
     border: 2px solid white; }
     .jumbotron .lang-logo img {
       max-width: 100%; }
+
+.tabs {
+  width: 90%;
+  margin: auto; }
+  .tabs .tab-content {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px;
+    background: white; }
+    .tabs .tab-content .in-out .in, .tabs .tab-content .in-out .out {
+      display: inline-block;
+      vertical-align:top;
+      width: 49%; }
