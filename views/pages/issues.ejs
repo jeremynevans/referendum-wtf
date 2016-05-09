@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>
+      <img src="/img/eu.jpg" style="height: 120px;margin: 0 24px 24px 24px;">
+      EU: <span style="color:#ffcc01; font-weight: 900;">WTF?!</span>
+      <img src="/img/eu.jpg" style="height: 120px;margin: 0 24px 24px 24px;">
+    </h1>
+    <p>EU&nbsp;Referendum.&#160;&#160;&#160;5&nbsp;minute&nbsp;guide.&#160;&#160;&#160;No&nbsp;nonsense.</p>
+    <a type="button" class="btn btn-lg btn-default" href="http://referendum.wtf"><span class="glyphicon glyphicon-flash" style="color:#ffcc01"></span> Take me to the issues</a>
+    <!-- <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a> -->
+  </div>
+</div>
+
+<div class="tabs">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home">One</div>
+    <div role="tabpanel" class="tab-pane fade" id="profile">Two</div>
+    <div role="tabpanel" class="tab-pane fade" id="messages">Three</div>
+    <div role="tabpanel" class="tab-pane fade" id="settings">Four</div>
+  </div>
+
+</div>
+
+</body>
+</html>

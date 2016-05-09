@@ -1,18 +1,37 @@
+body {
+  font-family: Lato, sans-serif; }
+.navbar-inverse {
+  background-color: #003399;
+  border: none; }
+  .navbar li.logo {
+    font-size: 1.6em;
+    font-weight: 300; }
+    .navbar li.logo a {
+      color: white; }
+      .navbar li.logo a:hover {
+        color: #ffcc01; }
+      .navbar li.logo .glyphicon {
+        font-size: 0.8em;
+        color: #ffcc01; }
 .jumbotron {
-  font-family: Lato, sans-serif;
   background: #003399;
   color: white;
-  padding-bottom: 80px; }
-  h1 {
-    font-weight: 700;
+  padding: 80px 0 100px 0; }
+  .jumbotron h1 {
+    font-size: 100px;
+    font-weight: 500;
   }
   .jumbotron .btn-primary {
     background: #845ac7;
     border-color: #845ac7; }
+    .jumbotron .btn-lg {
+      padding: 15px 20px; }
     .jumbotron .btn-primary:hover {
       background: #7646c1; }
   .jumbotron p {
     /*color: #d9ccee;*/
+    font-size: 36px;
+    font-weight: 300;
     max-width: 75%;
     margin: 1em auto 2em; }
   .navbar + .jumbotron {
