@@ -28,6 +28,11 @@ body {
     .jumbotron .btn:hover {
       background: #ffcc01;
       border: solid 4px #ffcc01; }
+      @media (max-width: 600px) {
+        .jumbotron .btn b {
+          display: block;
+          margin-top: 10px; }
+      }
   .jumbotron p {
     /*color: #d9ccee;*/
     font-weight: 300;
