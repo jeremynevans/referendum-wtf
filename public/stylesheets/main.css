@@ -22,13 +22,15 @@ body {
   h1 {
     font-weight: 700;
   }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
+  .jumbotron .btn {
+    border: solid 4px white; }
+    .jumbotron .btn:hover {
+      background: #ffcc01;
+      border: solid 4px #ffcc01; }
   .jumbotron p {
     /*color: #d9ccee;*/
+    font-weight: 300;
+    font-size: 24px;
     max-width: 75%;
     margin: 1em auto 2em; }
   .navbar + .jumbotron {
@@ -57,3 +59,6 @@ body {
       display: inline-block;
       vertical-align:top;
       width: 49%; }
+
+.mc-layout__modalContent, iframe {
+    border-radius: 8px; }
