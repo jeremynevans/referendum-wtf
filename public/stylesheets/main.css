@@ -20,7 +20,11 @@ body {
   background: #003399;
   color: white;
   padding-bottom: 80px; }
-  h1 {
+  .jumbotron img {
+    max-height: 250px;
+    max-width: 60%;
+    margin-bottom: -20px; }
+  .jumbotron h1 {
     font-weight: 700;
   }
   .jumbotron .btn {
