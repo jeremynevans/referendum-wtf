@@ -1,12 +1,16 @@
 
 body {
   font-family: Lato, sans-serif;
-  background: #f8f8f8; }
+  background: #f8f8f8;
+  font-size: 18px; }
+a {
+  color: #003399;
+}
 .navbar-inverse {
   background-color: #003399;
   border: none; }
   .navbar li.logo {
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-weight: 300; }
     .navbar li.logo a {
       color: white; }
@@ -60,6 +64,8 @@ body {
 .tabs {
   width: 90%;
   margin: auto; }
+  .tabs .nav>li>a {
+    font-weight: bold; }
   .tabs .tab-content {
     border: 1px solid #ddd;
     border-top: none;
@@ -68,7 +74,37 @@ body {
     .tabs .tab-content .in-out .in, .tabs .tab-content .in-out .out {
       display: inline-block;
       vertical-align:top;
-      width: 49%; }
+      width: 47%;
+      margin-right: 2%; }
+      .tabs .tab-content .in-out h3 {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 900;
+        color: #003399; }
+      .tabs .tab-content .in-out ul {
+        padding-left: 20px; }
+        .tabs .tab-content .in-out li {
+          margin-bottom: 10px;
+          display: block; }
+          .tabs .tab-content .in-out li:before {
+            /*Using a Bootstrap glyphicon as the bullet point*/
+            content: "\20ac";
+            font-family: 'Glyphicons Halflings';
+            font-size: 0.7em;
+            float: left;
+            margin-top: 4px;
+            margin-left: -22px;
+            color: #003399; }
 
 .mc-layout__modalContent, iframe {
     border-radius: 8px; }
+
+
+
+
+.jumbotron.issues {
+  margin-top: -80px;
+  padding-bottom: 0; }
+  .jumbotron.issues img.issues-icon {
+    height: 60px;
+    margin: 0 24px 15px 24px; }
