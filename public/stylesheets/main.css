@@ -132,6 +132,19 @@ a {
 
 
 
+@media (min-width: 851px) {
+  .tabs-mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .tabs-desktop-only {
+    display: none;
+  }
+}
+
+
 /* Undoing annoying things from jQuery Mobile */
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
  text-shadow: none;
