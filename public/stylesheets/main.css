@@ -36,7 +36,8 @@ a {
     font-weight: 700;
   }
   .jumbotron .btn {
-    border: solid 4px white; }
+    border: solid 4px white;
+    font-size: 18px; }
     .jumbotron .btn:hover {
       background: #ffcc01;
       border: solid 4px #ffcc01; }
@@ -49,7 +50,7 @@ a {
     /*color: #d9ccee;*/
     font-weight: 300;
     font-size: 24px;
-    max-width: 75%;
+    /*max-width: 75%;*/
     margin: 1em auto 2em; }
   .navbar + .jumbotron {
     margin-top: -60px; }
@@ -128,3 +129,26 @@ a {
     .jumbotron.issues img {
       height: 1.4em;
       margin-bottom: 15px; }
+
+
+
+/* Undoing annoying things from jQuery Mobile */
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+ text-shadow: none;
+}
+a a, html body .ui-group-theme-a a,
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+  font-weight: inherit;
+}
+button.ui-btn, .ui-controlgroup-controls button.ui-btn-icon-notext {
+  width: auto;
+  margin: inherit;;
+}
+.ui-btn, label.ui-btn {
+    font-weight: inherit;
+    border-width: inherit;
+    border-style: inherit;
+}
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+  color: #003399;
+}
