@@ -37,10 +37,11 @@ a {
   }
   .jumbotron .btn {
     border: solid 4px white !important;
+    background: white !important;
     font-size: 18px; }
     .jumbotron .btn:hover {
-      background: #ffcc01;
-      border: solid 4px #ffcc01; }
+      background: #ffcc01 !important;
+      border: solid 4px #ffcc01 !important; }
       @media (max-width: 600px) {
         .jumbotron .btn b {
           display: block;
