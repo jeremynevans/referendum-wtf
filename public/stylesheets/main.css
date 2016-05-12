@@ -79,12 +79,12 @@ a {
       display: inline-block;
       vertical-align:top;
       width: 47%;
-      margin: 40px 2% 0 0; }
+      margin: 10px 2% 0 0; }
       @media (max-width: 850px) {
         .tabs .tab-content .in-out .in, .tabs .tab-content .in-out .out {
         display: block;
         width: auto;
-        margin-right: 0; }
+        margin: 40px 0 0 0; }
       }
       .tabs .tab-content .in-out h3 {
         text-transform: uppercase;
