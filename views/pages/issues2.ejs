@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html -->
+<html class="ui-mobile"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html">--><base href=".">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>Navbar - jQuery Mobile Demos</title>
+	<link rel="shortcut icon" href="http://demos.jquerymobile.com/1.4.2/favicon.ico">
+    <link rel="stylesheet" href="/issues2/css">
+	<link rel="stylesheet" href="/issues2/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="/issues2/jqm-demos.css">
+	<script src="/issues2/jquery.js"></script><style type="text/css"></style>
+	<script src="/issues2/index.js"></script>
+	<script src="/issues2/jquery.mobile-1.4.2.min.js"></script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body class="ui-mobile-viewport ui-overlay-a" id="ui-page-top">
+<div data-role="page" class="jqm-demos ui-page ui-page-theme-a ui-page-footer-fixed ui-page-active" data-quicklinks="true" data-url="/1.4.2/tabs/tabbed-content.html" tabindex="0" style="padding-bottom: 62px; min-height: 557px;"><div data-role="panel" class="jqm-nav-panel jqm-quicklink-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-a ui-panel-animate" data-position="right" data-display="overlay" data-theme="a"><div class="ui-panel-inner"><ul data-role="listview" data-inset="false" data-theme="a" data-divider-theme="a" data-icon="false" class="jqm-list ui-listview ui-group-theme-a"><li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-a ui-first-child ui-last-child">Quick Links</li></ul></div></div>
+	<div data-demo-html="true">
+		<div data-role="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+			<div data-role="navbar" class="ui-navbar" role="navigation">
+				<ul class="ui-grid-b ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+			      <li class="ui-block-a ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="one" aria-labelledby="ui-id-1" aria-selected="true"><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#one" data-theme="a" data-ajax="false" class="ui-link ui-btn ui-btn-a ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">one</a></li>
+			      <li class="ui-block-b ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="two" aria-labelledby="ui-id-2" aria-selected="false"><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#two" data-theme="a" data-ajax="false" class="ui-link ui-btn ui-btn-a ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">two</a></li>
+			      <li class="ui-block-c ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="ui-tabs-1" aria-labelledby="ui-id-3" aria-selected="false"><a href="http://demos.jquerymobile.com/1.4.2/tabs/ajax-content.html" data-theme="a" data-ajax="false" class="ui-link ui-btn ui-btn-a ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">three</a></li>
+			    </ul>
+			</div>
+
+			<div id="one" class="ui-content ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" role="tabpanel" aria-expanded="true" aria-hidden="false">
+			<h1>First tab contents</h1>
+			</div>
+			<div id="two" class="ui-content ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-2" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+				<ul data-role="listview" class="ui-listview">
+				    <li class="ui-first-child"><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Acura</a></li>
+				    <li><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Audi</a></li>
+				    <li><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">BMW</a></li>
+				    <li><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Cadillac</a></li>
+				    <li class="ui-last-child"><a href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Ferrari</a></li>
+				</ul>
+			</div><div id="ui-tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" aria-live="polite" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;"></div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup" role="contentinfo">
+			<p>jQuery Mobile Demos version <span class="jqm-version">1.4.2</span></p>
+			<p>Copyright 2014 The jQuery Foundation</p>
+		</div><!-- /footer -->
+
+	</div><div><a class="jqm-view-source-link ui-btn ui-corner-all ui-btn-inline ui-mini" href="http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html#popupDemo" data-rel="popup" aria-haspopup="true" aria-owns="popupDemo" aria-expanded="false">View Source</a></div>
+</div><!-- /page -->
+
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div><div class="ui-panel-dismiss"></div><span class="_hsShareImage hsShareImage">&nbsp;</span></body></html>
