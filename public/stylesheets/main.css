@@ -36,7 +36,7 @@ a {
     font-weight: 700;
   }
   .jumbotron .btn {
-    border: solid 4px white;
+    border: solid 4px white !important;
     font-size: 18px; }
     .jumbotron .btn:hover {
       background: #ffcc01;
@@ -139,6 +139,9 @@ a {
 }
 
 @media (max-width: 850px) {
+  .navbar li.logo a {
+    text-align: center;
+  }
   .tabs-desktop-only {
     display: none;
   }
