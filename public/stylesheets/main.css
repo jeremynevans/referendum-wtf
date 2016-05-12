@@ -76,7 +76,8 @@ a {
     border: 1px solid #ddd;
     border-top: none;
     padding: 20px;
-    background: white; }
+    background: white;
+    margin-bottom: 20px; }
     .tabs .tab-content .in-out .in, .tabs .tab-content .in-out .out {
       display: inline-block;
       vertical-align:top;
