@@ -41,5 +41,11 @@ document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
   _gs('GSN-878072-A');
 </script>
 
+<script>
+  $('#open-popup').on('click', function() {
+    _gs('event', 'Opened popup');
+  });
+</script>
+
 </body>
 </html>
