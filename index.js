@@ -14,11 +14,11 @@ app.get('/', function(request, response) {
 });
 
 app.get('/issues', function(request, response) {
-  response.render('pages/issues3');
+  response.render('pages/issues');
 });
 
-app.get('/issues2', function(request, response) {
-  response.render('pages/issues');
+app.get('/issues1', function(request, response) {
+  response.render('pages/issues1');
 });
 
 // app.get('/issues3', function(request, response) {

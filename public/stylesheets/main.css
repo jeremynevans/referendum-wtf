@@ -1,4 +1,13 @@
-
+.span {
+  display: inline-block;
+}
+div.loading {
+  text-align: center;
+}
+div.loading img {
+  width: 100%;
+  max-width: 300px;
+}
 body {
   font-family: Lato, sans-serif;
   background: #f8f8f8;
