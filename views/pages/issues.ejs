@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.2.min.css" />
   <% include ../partials/header.ejs %>
+  <script type="text/javascript" src="/js/jquery.mobile-1.4.2.min.js"></script>
 </head>
 
 <body>
@@ -18,18 +20,170 @@
   </div>
 </div>
 
-<div class="tabs">
+
+
+	<div data-role="tabs" id="tabs" class="tabs tabs-mobile-only">
+	  <div data-role="navbar">
+	    <ul>
+	      <li aria-selected="true"><a class="ui-link ui-btn ui-tabs-anchor ui-btn-active" href="#me" data-ajax="false">The EU and Me</a></li>
+	      <li><a href="#money" data-ajax="false">The EU and Money</a></li>
+	      <li><a href="#power" data-ajax="false">The EU and Power</a></li>
+	      <li><a href="#borders" data-ajax="false">The EU and Borders</a></li>
+	    </ul>
+	  </div>
+
+
+    <div class="tab-content">
+  	  <div id="me" class="ui-body-d tab-pane">
+        EU citizens can <b>live and work</b> in any other EU country, and are affected by the EU’s rules on the <b>price and quality</b> of things like travel, healthcare, energy and phone tariffs.
+        <div class="in-out">
+          <div class="in">
+            <h3>In</h3>
+            <ul>
+              <li>
+                EU citizens living in Britain <b>pay more in taxes</b> than they receive in benefits. Around 1.2 million <b>Brits live abroad</b> in the EU, and having membership <b>makes travel easier</b>.
+              </li>
+              <li>
+                Flights, healthcare, energy and phone tariffs are all likely (though not guaranteed) to <b>go up in price</b> if we leave the EU.
+              </li>
+              <li>
+                The EU negotiates energy deals as a <b>large, allegedly stronger</b>, bloc.
+              </li>
+            </ul>
+          </div>
+          <div class="out">
+            <h3>Out</h3>
+            <ul>
+              <li>
+                The UK Government is limited in its ability to <b>reduce immigration</b> due to the rules of being in the EU.
+              </li>
+              <li>
+                The UK is unable to <b>change legislation</b> like the ‘tampon tax’ without it going through the EU, which often takes more time.
+              </li>
+              <li>
+                Most of the UK's gas imports come from Norway – Britain is not dependent on Russia
+              </li>
+            </ul>
+          </div>
+        </div>
+  	  </div>
+  	  <div id="money">
+        The UK contributes around <b>£8.5bn in fees</b> to the EU each year (or £161m a week), once you discount the money we get straight back.
+        <div class="in-out">
+          <div class="in">
+            <h3>In</h3>
+            <ul>
+              <li>
+                Over <b>40% of British exports</b> go to the EU and <b>53% of our products</b> come from the EU.
+              </li>
+              <li>
+                Britain would <b>still have to comply</b> with EU rules to trade with EU countries.
+              </li>
+              <li>
+                If we left the EU an <b>estimated £36bn would be lost</b> due to slower growth reducing the total tax paid to the Treasury.
+              </li>
+            </ul>
+          </div>
+          <div class="out">
+            <h3>Out</h3>
+            <ul>
+              <li>
+                Some of the <b>£161m</b> that we spend every week contributes to <b>bailing out nations like Greece</b>, instead of being spent on the UK.
+              </li>
+              <li>
+                Even the additional money that we get straight back from things like rebates comes with <b>rules about what we can spend it on</b>.
+              </li>
+              <li>
+                Britain could emulate countries like Norway or Switzerland, both prosperous and with a high standard-of-living, and <b>re-establish trade links</b> with EU states.
+              </li>
+            </ul>
+          </div>
+        </div>
+  	  </div>
+  	  <div id="power">
+        We join other European countries in <b>signing up to the rules</b> of being in the EU, affecting things like fishing waters, renewable energy policies, limits on workers’ hours per week.
+        <div class="in-out">
+          <div class="in">
+            <h3>In</h3>
+            <ul>
+              <li>
+                In a competitive, globalised world the UK needs to stay in the EU to <b>help shape laws</b> which affect the UK from the inside.
+              </li>
+              <li>
+                The government doesn’t just influence through <b>voting</b> but also in <b>negotiating</b> over actual text of laws.
+              </li>
+              <li>
+                Cooperating with EU members offers a way of maximising opportunities to find <b>joint solutions</b> to shared problems.
+              </li>
+              <li>
+                Many EU laws benefit the UK, for instance the <b>new EU CAP will invest £22 billion</b> over the next 7 years
+              </li>
+            </ul>
+          </div>
+          <div class="out">
+            <h3>Out</h3>
+            <ul>
+              <li>
+                The House Of Commons Library states that <b>between 15% and 55% of UK legislation</b> comes from EU law.
+              </li>
+              <li>
+                Whatever the actual percentage, the laws passed at EU level have a <b>significant impact</b> on the UK.
+              </li>
+              <li>
+                In recent years the UK has been on the losing side of fighting EU laws, and now <b>loses a higher proportion of votes</b> than any other members.
+              </li>
+              <li>
+                Open Europe estimates that the 100 most expensive EU regulations set back the UK economy by <b>£27.4 billion a year</b>.
+              </li>
+            </ul>
+          </div>
+        </div>
+  	  </div>
+  	  <div id="borders">
+        Total net migration to the UK is over 300,000 a year, half of which is from the EU, while the government’s target is under 100,000. EU citizens have the right to live and work in any member state.
+        <div class="in-out">
+          <div class="in">
+            <h3>In</h3>
+            <ul>
+              <li>
+                Immigrants, especially those from the EU, pay more in taxes than they take out and the Remain side say they’re good for the economy.
+              </li>
+              <li>
+                Benefits for new EU migrant workers will soon be limited for the first four years
+              </li>
+            </ul>
+          </div>
+          <div class="out">
+            <h3>Out</h3>
+            <ul>
+              <li>
+                Immigration can only be controlled so much when you’re an EU member
+              </li>
+              <li>
+                High immigration has apparently driven down wages for British workers and apparently put strain on public services
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  	  </div>
+    </div>
+	</div>
+
+
+
+<div class="tabs tabs-desktop-only">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#me" aria-controls="me" role="tab" data-toggle="tab">The EU and Me</a></li>
-    <li role="presentation"><a href="#money" aria-controls="money" role="tab" data-toggle="tab">The EU and Money</a></li>
-    <li role="presentation"><a href="#power" aria-controls="power" role="tab" data-toggle="tab">The EU and Power</a></li>
-    <li role="presentation"><a href="#borders" aria-controls="borders" role="tab" data-toggle="tab">The EU and Borders</a></li>
+    <li role="presentation" class="active"><a href="#me1" aria-controls="me1" role="tab" data-toggle="tab">The EU and Me</a></li>
+    <li role="presentation"><a href="#money1" aria-controls="money1" role="tab" data-toggle="tab">The EU and Money</a></li>
+    <li role="presentation"><a href="#power1" aria-controls="power1" role="tab" data-toggle="tab">The EU and Power</a></li>
+    <li role="presentation"><a href="#borders1" aria-controls="borders1" role="tab" data-toggle="tab">The EU and Borders</a></li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="me">
+    <div role="tabpanel" class="tab-pane fade in active" id="me1">
       EU citizens can <b>live and work</b> in any other EU country, and are affected by the EU’s rules on the <b>price and quality</b> of things like travel, healthcare, energy and phone tariffs.
       <div class="in-out">
         <div class="in">
@@ -42,7 +196,7 @@
               Flights, healthcare, energy and phone tariffs are all likely (though not guaranteed) to <b>go up in price</b> if we leave the EU.
             </li>
             <li>
-              The EU negotiates energy deals as a <b>large, allegedly stronger, bloc.
+              The EU negotiates energy deals as a <b>large, allegedly stronger</b>, bloc.
             </li>
           </ul>
         </div>
@@ -50,29 +204,32 @@
           <h3>Out</h3>
           <ul>
             <li>
-              The UK Government is limited in its ability to reduce immigration due to the rules of being in the EU.
+              The UK Government is limited in its ability to <b>reduce immigration</b> due to the rules of being in the EU.
             </li>
             <li>
-              The UK is unable to change legislation like the ‘tampon tax’ without it going through the EU, which often takes more time.
+              The UK is unable to <b>change legislation</b> like the ‘tampon tax’ without it going through the EU, which often takes more time.
             </li>
             <li>
-              “Most of the UK's gas imports come from Norway – Britain is not dependent on Russia”
+              Most of the UK's gas imports come from Norway – Britain is not dependent on Russia
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div role="tabpanel" class="tab-pane fade" id="money">
-      The UK contributes around £8.5bn in fees to the EU each year, once you discount the money we get straight back. 51% of British exports go to the EU and 53% of our products come from the EU.
+    <div role="tabpanel" class="tab-pane fade" id="money1">
+      The UK contributes around <b>£8.5bn in fees</b> to the EU each year (or £161m a week), once you discount the money we get straight back.
       <div class="in-out">
         <div class="in">
           <h3>In</h3>
           <ul>
             <li>
-              The business group CBI says the UK's membership of the EU is worth £62-78bn a year, but Channel 4's FactCheck says this is "not based on any real evidence".
+              Over <b>40% of British exports</b> go to the EU and <b>53% of our products</b> come from the EU.
             </li>
             <li>
-              The UK avoids exporter tariffs and red tape by being part of the EU, and has international negotiating power as well as access to large trade agreements between the EU and the US.
+              Britain would <b>still have to comply</b> with EU rules to trade with EU countries.
+            </li>
+            <li>
+              If we left the EU an <b>estimated £36bn would be lost</b> due to slower growth reducing the total tax paid to the Treasury.
             </li>
           </ul>
         </div>
@@ -80,26 +237,35 @@
           <h3>Out</h3>
           <ul>
             <li>
-              Eurosceptics say the membership fee could be used for more 'observable' benefits to the British public, and that UK politicians should be able to decide how the money is spent. They also say our contribution helps bail out heavily indebted EU members like Greece.
+              Some of the <b>£161m</b> that we spend every week contributes to <b>bailing out nations like Greece</b>, instead of being spent on the UK.
             </li>
             <li>
-              Britain could emulate countries like Norway or Switzerland, both prosperous and with a high standard-of-living, and re-establish trade links with EU states. We would also be free of EU restrictions on trade with growing international economies like China and India.
+              Even the additional money that we get straight back from things like rebates comes with <b>rules about what we can spend it on</b>.
+            </li>
+            <li>
+              Britain could emulate countries like Norway or Switzerland, both prosperous and with a high standard-of-living, and <b>re-establish trade links</b> with EU states.
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div role="tabpanel" class="tab-pane fade" id="power">
-      EU membership means the UK joins other European countries in signing up to a series of policies and restrictions, affecting things like fishing waters, renewable energy policies, limits on workers’ hours per week.
+    <div role="tabpanel" class="tab-pane fade" id="power1">
+      We join other European countries in <b>signing up to the rules</b> of being in the EU, affecting things like fishing waters, renewable energy policies, limits on workers’ hours per week.
       <div class="in-out">
         <div class="in">
           <h3>In</h3>
           <ul>
             <li>
-              Many EU laws have clear benefits for the UK, such as the billions of pounds in subsidies for British farmers, and staying in means we can help shape laws across the EU from the inside.
+              In a competitive, globalised world the UK needs to stay in the EU to <b>help shape laws</b> which affect the UK from the inside.
             </li>
             <li>
-              Britain’s voice is currently represented by the large and influential EU at international summits, and membership is designed to make it easier to find joint solutions with other EU countries.
+              The government doesn’t just influence through <b>voting</b> but also in <b>negotiating</b> over actual text of laws.
+            </li>
+            <li>
+              Cooperating with EU members offers a way of maximising opportunities to find <b>joint solutions</b> to shared problems.
+            </li>
+            <li>
+              Many EU laws benefit the UK, for instance the <b>new EU CAP will invest £22 billion</b> over the next 7 years
             </li>
           </ul>
         </div>
@@ -107,19 +273,22 @@
           <h3>Out</h3>
           <ul>
             <li>
-
+              The House Of Commons Library states that <b>between 15% and 55% of UK legislation</b> comes from EU law.
             </li>
             <li>
-
+              Whatever the actual percentage, the laws passed at EU level have a <b>significant impact</b> on the UK.
             </li>
             <li>
-
+              In recent years the UK has been on the losing side of fighting EU laws, and now <b>loses a higher proportion of votes</b> than any other members.
+            </li>
+            <li>
+              Open Europe estimates that the 100 most expensive EU regulations set back the UK economy by <b>£27.4 billion a year</b>.
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div role="tabpanel" class="tab-pane fade" id="borders">
+    <div role="tabpanel" class="tab-pane fade" id="borders1">
       Total net migration to the UK is over 300,000 a year, half of which is from the EU, while the government’s target is under 100,000. EU citizens have the right to live and work in any member state.
       <div class="in-out">
         <div class="in">

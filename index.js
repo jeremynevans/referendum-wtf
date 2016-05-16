@@ -13,12 +13,12 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/issues', function(request, response) {
-  response.render('pages/issues');
+app.get('/issues_new', function(request, response) {
+  response.render('pages/issues1');
 });
 
-app.get('/issues1', function(request, response) {
-  response.render('pages/issues1');
+app.get('/issues', function(request, response) {
+  response.render('pages/issues');
 });
 
 // app.get('/issues3', function(request, response) {

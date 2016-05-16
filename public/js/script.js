@@ -29,8 +29,8 @@ var getPanelHTML = function(i, data) {
   // var firstBit = i==0 ? ' in active' : '';
   // var panelHTML = '<div role="tabpanel" class="tab-pane fade' + firstBit + '" id="' + data.id + '1"><p>' + intro + inOut + '</p></div>';
   var panelHTML = '<p>' + intro + inOut + '</p>';
-  // $('#' + data.id + '1').html('hi');
-  // $('#' + data.id + '1').html(panelHTML);
+  $('#' + data.id + '1').html(panelHTML);
+  $('#' + data.id).html(panelHTML);
   return panelHTML;
 };
 
