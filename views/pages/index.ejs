@@ -14,6 +14,10 @@
     <img src="/img/eu-wtf.jpg">
     <h1>referendum<span style="color:#ffcc01">.wtf</span></h1>
     <p>Your <span style="font-weight: 400; color:#ffcc01;">neutral, no-nonsense</span> guide to the EU Referendum</p>
+    <!-- <a class="twitter-follow-button" href="https://twitter.com/referendum_wtf" data-size="large" data-show-count="false" data-show-screen-name="false">Follow @Referendum_WTF</a> -->
+    <!-- <div class="fb-like" data-href="https://www.facebook.com/Referendum.wtf/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div><br> -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div style="margin: 20px auto; position: relative; font-size: 30px; width: 110px;"><div class="addthis_horizontal_follow_toolbox"></div></div>
     <button id="open-popup" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-envelope" style="color:#003399"></span>&nbsp;&nbsp;Coming soon! <b>Click here to get notified</b></button>
   </div>
 </div>
@@ -46,6 +50,36 @@ document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
     _gs('event', 'Opened popup');
   });
 </script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-573cf6f2f42c4d24"></script>
+
 
 </body>
 </html>
