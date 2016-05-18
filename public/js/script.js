@@ -24,14 +24,18 @@ var getPanelHTML = function(i, data) {
   var intro = boldify(data.intro[0].value);
   var inOut = getInOutHTML(data);
   var subsectionsHTML = '';
+  var subsectionsHTML1 = '';
   $.each(data.subsections, function(i, e) {
-    subsectionsHTML += getSubsectionHTML(e);
+    subsectionsHTML += getSubsectionHTML(e, '');
+    subsectionsHTML1 += getSubsectionHTML(e, '1');
   });
   subsectionsHTML = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">' + subsectionsHTML + '</div>';
+  subsectionsHTML1 = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">' + subsectionsHTML1 + '</div>';
   // var firstBit = i==0 ? ' in active' : '';
   // var panelHTML = '<div role="tabpanel" class="tab-pane fade' + firstBit + '" id="' + data.id + '1"><p>' + intro + inOut + '</p></div>';
   var panelHTML = '<p>' + intro + '</p>' + inOut + subsectionsHTML;
-  $('#' + data.id + '1').html(panelHTML);
+  var panelHTML1 = '<p>' + intro + '</p>' + inOut + subsectionsHTML1;
+  $('#' + data.id + '1').html(panelHTML1);
   $('#' + data.id).html(panelHTML);
   // $('.panel-title a').click(function() {
     // console.log(this.getAttribute('href'));
@@ -56,11 +60,12 @@ var getInOutHTML = function(data) {
   return inOutHTML;
 };
 
-var getSubsectionHTML = function(data) {
+var getSubsectionHTML = function(data, desktop) {
+  console.log(desktop);
   var intro = boldify(data.intro[0].value);
-  var inOut = getSubsectionInOutHTML(data);
+  var inOut = getSubsectionInOutHTML(data, desktop);
   // var firstBit = i==0 ? ' in active' : '';
-  var panelHTML = '<div class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + data.id + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + '"prices" aria-expanded="false" aria-controls="collapseprices' + data.id + '" class="collapsed">' + data.title[0].value + '</a></h4></div> <div id="collapse' + data.id + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + '"><div class="panel-body">' + intro + inOut + '</div></div></div>';
+  var panelHTML = '<div class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed">' + data.title[0].value + '</a></h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"><div class="panel-body">' + intro + inOut + '</div></div></div>';
   // var panelHTML = '<p>' + intro + inOut + '</p>';
   // $('#subsection-' + data.id + '1').html(panelHTML);
   // $('#subsection-' + data.id).html(panelHTML);
