@@ -93,6 +93,7 @@ var getSubsectionInOutHTML = function(data) {
 var boldify = function(text) {
   // bolded=text.replace(/\*.+\*/gi, function myFunction(x){return '<b>' + x + '</b>';});
   // bolded = bolded.replace(/\*/gi, "");
-  var bolded = text.replace(/\*([^*]+?)\*/g, "<b>$1<\/b>");
+  var bolded = text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div>')
+                    .replace(/\*([^*]+?)\*/g, '<b>$1<\/b>');
   return bolded;
 }

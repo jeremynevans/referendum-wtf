@@ -19,6 +19,10 @@ body {
 a {
   color: #003399;
 }
+.bullet-heading {
+  display: inline-block;
+  font-weight: bold;
+  color: #003399; }
 .navbar-inverse {
   background-color: #003399;
   border: none; }
