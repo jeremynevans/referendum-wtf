@@ -19,6 +19,32 @@ body {
 a {
   color: #003399;
 }
+
+.modal-content {
+  overflow: hidden; }
+  .modal-header {
+    background: #003399; }
+    .modal-header .close {
+      color: white;
+      opacity: 1; }
+    .modal-header .close:hover {
+      opacity: 0.7; }
+    .modal-title {
+      color: #ffcc01;
+      font-size: 24px; }
+  .modal-content h3 {
+    font-size: 22px;
+    color: #003399; }
+  .modal-footer {
+    text-align: center; }
+    .modal-footer .btn-primary {
+      background: #003399;
+      color: #ffcc01; }
+      .modal-footer .btn-primary:hover {
+        background: #ffcc01;
+        color: #003399; }
+
+
 .bullet-heading {
   display: inline-block;
   font-weight: bold;
