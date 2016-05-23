@@ -1,10 +1,12 @@
 var myData;
+var notLoaded = true;
 
 $.doctop({
   url: '//docs.google.com/document/d/15oMHuBNX4CTMvaAm7piTaWVwpc8kaO0bDLg190p5Qdc/pub',
   archieml: true,
   cache: false,
   callback: function(d){
+      notLoaded = false;
       console.dir(d);
       myData = d.copy.archie.sections;
       console.log(myData);
@@ -93,7 +95,16 @@ var getSubsectionInOutHTML = function(data) {
 var boldify = function(text) {
   // bolded=text.replace(/\*.+\*/gi, function myFunction(x){return '<b>' + x + '</b>';});
   // bolded = bolded.replace(/\*/gi, "");
-  var bolded = text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div>')
-                    .replace(/\*([^*]+?)\*/g, '<b>$1<\/b>');
+  var bolded = !text ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div>')
+                                  .replace(/\*([^*]+?)\*/g, '<b>$1<\/b>');
   return bolded;
 }
+
+
+setTimeout(function() {
+  if (notLoaded) {
+    var whoops = '<div class="coming-soon"><h3>😳 Well, this is awkward..! 😳</h3><h4>🙈 🙉 🙊 We seem to have failed to load much here - <b>please help us figure out why</b>! 📨 Email <a href="mailto:whoops@referendum.wtf">whoops@referendum.wtf</a></h4></div>'
+    $('.tab-pane').html(whoops);
+    $('.tab-content').html(whoops);
+  }
+}, 10000)
