@@ -67,7 +67,7 @@ var getSubsectionHTML = function(data, desktop) {
   console.log(desktop);
   var intro = boldify(data.intro[0].value);
   var inOut = getSubsectionInOutHTML(data, desktop);
-  var comingsoon = '<div class="coming-soon"><h3>⌛ This section is coming&nbsp;soon..! ⌛</h3><h4>🙈 🙉 🙊 Don\'t miss out on getting involved - <b>help us 📝 write this section</b>! 📨 Email <a href="mailto:FOMO@referendum.wtf">FOMO@referendum.wtf</a></h4></div>'
+  var comingsoon = '<div class="coming-soon"><h3>⌛ This section is coming&nbsp;soon..! ⌛</h3><h4>🙈 🙉 🙊 Don\'t miss out on getting involved - <b>help us</b> 📝 <b>write this section</b>! 📨 Email <a href="mailto:FOMO@referendum.wtf">FOMO@referendum.wtf</a></h4></div>'
   var content = data.comingsoon ? comingsoon : intro + inOut;
   // var firstBit = i==0 ? ' in active' : '';
   var panelHTML = '<div class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed">' + data.title[0].value + '</a></h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"><div class="panel-body">' + content + '</div></div></div>';
