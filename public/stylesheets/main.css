@@ -19,9 +19,13 @@ body {
 a {
   color: #003399;
 }
+a:visited {
+  color: auto !important;
+}
 
 .modal-content {
-  overflow: hidden; }
+  overflow: hidden;
+  border-radius: 10px; }
   .modal-header {
     background: #003399; }
     .modal-header .close {
