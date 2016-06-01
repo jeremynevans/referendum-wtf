@@ -227,16 +227,19 @@ a:visited {
   background: white;
   text-align: center;
   margin-bottom: 30px; }
-  .well h3 {
-    color: #003399;
-    font-weight: bold;
-    font-size: 32px; }
-  .well a:hover {
-    opacity: 0.7; }
-  .well img {
-    max-width: 260px;
-    max-height: 100px;
-    margin: 20px; }
+  .well > div {
+    max-width: 1000px;
+    margin: auto; }
+    .well h3 {
+      color: #003399;
+      font-weight: bold;
+      font-size: 32px; }
+    .well a:hover {
+      opacity: 0.7; }
+    .well img {
+      max-width: 260px;
+      max-height: 100px;
+      margin: 20px; }
 
 
 
