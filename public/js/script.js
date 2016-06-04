@@ -6,11 +6,12 @@ $.doctop({
   archieml: true,
   cache: false,
   callback: function(d){
+    if (notLoaded) {
       notLoaded = false;
-      console.dir(d);
       myData = d.copy.archie.sections;
       console.log(myData);
-      // getAllPanelsHTML(myData);
+      getAllPanelsHTML(myData);
+    }
   }
 });
 
@@ -63,7 +64,6 @@ var getInOutHTML = function(data) {
 };
 
 var getSubsectionHTML = function(data, desktop) {
-  console.log(desktop);
   var intro = boldify(data.intro[0].value);
   var inOut = getSubsectionInOutHTML(data, desktop);
   var comingsoon = '<div class="coming-soon"><h3>⌛ This section is coming&nbsp;soon..! ⌛</h3><h4>🙈 🙉 🙊 Don\'t miss out on getting involved - <b>help us</b> 📝 <b>write this section</b>! 📨 Email <a href="mailto:FOMO@referendum.wtf">FOMO@referendum.wtf</a></h4></div>'
@@ -102,11 +102,14 @@ var boldify = function(text) {
 
 
 setTimeout(function() {
-  // if (notLoaded) {
+  if (notLoaded) {
+    console.log('Using backup data')
+    notLoaded = false;
     myData = backupMyData;
+    console.log(myData);
     getAllPanelsHTML(myData);
     // var whoops = '<div class="coming-soon"><h3>😳 Well, this is awkward..! 😳</h3><h4>🙈 🙉 🙊 We seem to have failed to load much here - <b>please help us figure out why</b>! 📨 Email <a href="mailto:whoops@referendum.wtf">whoops@referendum.wtf</a></h4></div>'
     // $('.tab-pane').html(whoops);
     // $('.tab-content').html(whoops);
-  // }
-}, 1000)
+  }
+}, 4000)
