@@ -67,9 +67,10 @@ var getSubsectionHTML = function(data, desktop) {
   var intro = boldify(data.intro[0].value);
   var inOut = getSubsectionInOutHTML(data, desktop);
   var comingsoon = '<div class="coming-soon"><h3>⌛ This section is coming&nbsp;soon..! ⌛</h3><h4>🙈 🙉 🙊 Don\'t miss out on getting involved - <b>help us</b> 📝 <b>write this section</b>! 📨 Email <a href="mailto:FOMO@referendum.wtf">FOMO@referendum.wtf</a></h4></div>'
+  data.comingsoon = false; //temporary
   var content = data.comingsoon ? comingsoon : intro + inOut;
   // var firstBit = i==0 ? ' in active' : '';
-  var panelHTML = '<div class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed">' + data.title[0].value + '</a></h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"><div class="panel-body">' + content + '</div></div></div>';
+  var panelHTML = '<div class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed subsection-heading">' + data.title[0].value + '</a></h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"><div class="panel-body">' + content + '</div></div></div>';
   // var panelHTML = '<p>' + intro + inOut + '</p>';
   // $('#subsection-' + data.id + '1').html(panelHTML);
   // $('#subsection-' + data.id).html(panelHTML);
@@ -113,3 +114,22 @@ setTimeout(function() {
     // $('.tab-content').html(whoops);
   }
 }, 4000)
+
+
+
+
+$('body').on('click', '.tab-content a:not(.subsection-heading)', function() {
+  console.log('hi');
+  var key = $(this).attr('href').split('#')[1];
+  console.log(key);
+  window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: key }, "*");
+});
+
+$('.explaain-container').css('height', $(window).height());
+$(document).scroll(function() {
+  if ($(document).scrollTop() > 160) {
+    $('.explaain-container').addClass('sticky');
+  } else {
+    $('.explaain-container').removeClass('sticky');
+  }
+});

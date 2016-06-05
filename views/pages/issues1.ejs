@@ -26,35 +26,41 @@
 
 
 
+<div class="tabs-container">
+  <div class="tabs tabs-desktop-only">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#me1" aria-controls="me1" role="tab" data-toggle="tab" onclick="_gs('event', 'Me Tab (Desktop)')">The EU and Me</a></li>
+      <li role="presentation"><a href="#money1" aria-controls="money1" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">The EU and Money</a></li>
+      <li role="presentation"><a href="#power1" aria-controls="power1" role="tab" data-toggle="tab" onclick="_gs('event', 'Power Tab (Desktop)')">The EU and Power</a></li>
+      <li role="presentation"><a href="#borders1" aria-controls="borders1" role="tab" data-toggle="tab" onclick="_gs('event', 'Borders Tab (Desktop)')">The EU and Borders</a></li>
+    </ul>
 
-<div class="tabs tabs-desktop-only">
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#me1" aria-controls="me1" role="tab" data-toggle="tab" onclick="_gs('event', 'Me Tab (Desktop)')">The EU and Me</a></li>
-    <li role="presentation"><a href="#money1" aria-controls="money1" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">The EU and Money</a></li>
-    <li role="presentation"><a href="#power1" aria-controls="power1" role="tab" data-toggle="tab" onclick="_gs('event', 'Power Tab (Desktop)')">The EU and Power</a></li>
-    <li role="presentation"><a href="#borders1" aria-controls="borders1" role="tab" data-toggle="tab" onclick="_gs('event', 'Borders Tab (Desktop)')">The EU and Borders</a></li>
-  </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="me1">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="money1">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="power1">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="borders1">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div>
+    </div>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="me1">
-      <div class="loading"><img src="/img/loading1.gif"></div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade in" id="money1">
-      <div class="loading"><img src="/img/loading1.gif"></div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="power1">
-      <div class="loading"><img src="/img/loading1.gif"></div>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="borders1">
-      <div class="loading"><img src="/img/loading1.gif"></div>
-    </div>
   </div>
 
+
+  <div class="explaain-container">
+    <div class="explaain-box">
+      <iframe id="explaain" frameborder="0" style="height: 100%; width: 100%" src="https://explaain-landing-referendum.herokuapp.com/demo/"></iframe>
+    </div>
+  </div>
 </div>
-
-
 
 
 	<div data-role="tabs" id="tabs" class="tabs tabs-mobile-only">
@@ -84,15 +90,17 @@
     </div>
 	</div>
 
-  <div class="well">
-    <h3>Share the love - say hi to our friends...</h3>
-    <div>
-      <a href="http://wtfisbrexit.com/" target="_blank" onclick="_gs('event', 'Outbound: WTFisBrexit')"><img src="/img/friends/wtfisbrexit.png"></a>
-      <a href="http://leaveorstay.co.uk/" target="_blank" onclick="_gs('event', 'Outbound: LeaveOrStay')"><img src="/img/friends/leaveorstay.png"></a>
-      <a href="http://takepart.london" target="_blank" onclick="_gs('event', 'Outbound: TakePart')"><img src="/img/friends/takepart.png"></a>
-      <a href="https://electionmate.hackeurope.uk/" target="_blank" onclick="_gs('event', 'Outbound: ElectionMate')"><img src="/img/friends/electionmate.png"></a>
-      <a href="https://smashthevote.uk/" target="_blank" onclick="_gs('event', 'Outbound: SmashTheVote')"><img src="/img/friends/smashthevote.png"></a>
-      <a href="https://represent.me/eu/" target="_blank" onclick="_gs('event', 'Outbound: Represent')"><img src="/img/friends/represent.png"></a>
+  <div class="friends-container">
+    <div class="well">
+      <h3>Share the love - say hi to our friends...</h3>
+      <div>
+        <a href="http://wtfisbrexit.com/" target="_blank" onclick="_gs('event', 'Outbound: WTFisBrexit')"><img src="/img/friends/wtfisbrexit.png"></a>
+        <a href="http://leaveorstay.co.uk/" target="_blank" onclick="_gs('event', 'Outbound: LeaveOrStay')"><img src="/img/friends/leaveorstay.png"></a>
+        <a href="http://takepart.london" target="_blank" onclick="_gs('event', 'Outbound: TakePart')"><img src="/img/friends/takepart.png"></a>
+        <a href="https://electionmate.hackeurope.uk/" target="_blank" onclick="_gs('event', 'Outbound: ElectionMate')"><img src="/img/friends/electionmate.png"></a>
+        <a href="https://smashthevote.uk/" target="_blank" onclick="_gs('event', 'Outbound: SmashTheVote')"><img src="/img/friends/smashthevote.png"></a>
+        <a href="https://represent.me/eu/" target="_blank" onclick="_gs('event', 'Outbound: Represent')"><img src="/img/friends/represent.png"></a>
+      </div>
     </div>
   </div>
 
