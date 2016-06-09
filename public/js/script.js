@@ -102,7 +102,7 @@ var boldify = function(text) {
 
 
 setTimeout(function() {
-  if (notLoaded) {
+  // if (notLoaded) {
     console.log('Using backup data')
     notLoaded = false;
     myData = backupMyData;
@@ -111,5 +111,5 @@ setTimeout(function() {
     // var whoops = '<div class="coming-soon"><h3>😳 Well, this is awkward..! 😳</h3><h4>🙈 🙉 🙊 We seem to have failed to load much here - <b>please help us figure out why</b>! 📨 Email <a href="mailto:whoops@referendum.wtf">whoops@referendum.wtf</a></h4></div>'
     // $('.tab-pane').html(whoops);
     // $('.tab-content').html(whoops);
-  }
-}, 4000)
+  // }
+}, 40)
