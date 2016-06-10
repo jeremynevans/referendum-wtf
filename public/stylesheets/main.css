@@ -52,7 +52,10 @@ a:visited {
 .bullet-heading {
   display: inline-block;
   font-weight: bold;
-  color: #003399; }
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #333;
+}
 .navbar-inverse {
   background-color: #003399;
   border: none; }
