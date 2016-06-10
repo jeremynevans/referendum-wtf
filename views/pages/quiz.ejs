@@ -28,10 +28,11 @@
   <% include ../partials/nav.ejs %>
 
   <div class="quiz">
-    <h1 style="margin-top: 150px;">The Referendum.WTF EU Pub Quiz!</h1>
+    <h1 style="margin-top: 100px;">The Referendum.WTF EU Pub Quiz!</h1>
     <h3>Ready to start?</h3>
     <hr>
-    <button class="btn btn-primary btn-lg btn-block" onclick="newRound()">Let's go!</button>
+    <input placeholder="Enter your name" id="myName" class="form-control" style="margin-bottom: 20px;">
+    <button class="btn btn-primary btn-lg btn-block" onclick="startQuiz()">Let's go!</button>
   </div>
 
   <script src="/js/jquery.js"></script>

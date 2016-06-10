@@ -1,5 +1,5 @@
 var countdown;
-
+var name;
 var score = 0;
 
 var currentRound = -1;
@@ -24,6 +24,12 @@ var rounds = [
   }
 ];
 
+var startQuiz = function() {
+  name = $('#myName').val();
+  newRound();
+}
+
+
 var newRound = function() {
   if (currentRound+1 < rounds.length) {
     round = currentRound + 1;
@@ -36,8 +42,9 @@ var newRound = function() {
     $('.quiz').html(roundTemplate);
     countdownInit();
   } else {
-    var resultTemplate = '<div class="result"><h3>EU must be joking!</h3><h4>You scored...</h4><p class="score">' + score + '<span>/' + rounds.length + '</span></p></div>'
+    var resultTemplate = '<div class="result"><img src="/img/eu-wtf.jpg" style="max-width: 60%; margin-top: -20px;"><h3>EU must be joking!</h3><h2 style="color:#ffcc01;">' + name + '</h2><h4>You scored...</h4><p class="score">' + score + '<span>/' + rounds.length + '</span></p><p><span style="color:#ffcc01;">#</span>areEUready</p></div>'
     $('.quiz').html(resultTemplate);
+    $('body').css('background', '#003399');
   }
 };
 
@@ -58,7 +65,7 @@ var submitAnswer = function(thisButton) {
   if (currentRound+1 < rounds.length) {
     nextButtonMessage = 'Go to question ' + (currentRound+2);
   } else {
-    nextButtonMessage = 'And that\'s it - now check out your result!';
+    nextButtonMessage = 'And that\'s it <br>- now check out your result!';
   }
   $('.quiz').append('<hr><button class="btn btn-primary btn-lg btn-block" onclick="newRound()">' + nextButtonMessage + '</button>');
   // newRound(round + 1);

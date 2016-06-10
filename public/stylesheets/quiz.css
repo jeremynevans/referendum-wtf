@@ -19,10 +19,11 @@
 
 p.score {
   font-size: 80px;
-  color: #003399;
+  color: #ffcc01;
 }
 p.score span {
   font-size: 56px;
+  color: white;
 }
 
 button.btn-default {
@@ -32,4 +33,8 @@ button.btn-default {
 button.btn-primary {
   background: #003399;
   color: #ffcc01;
+}
+
+.result, .result h1, .result h2, .result h3, .result h4 {
+  color: white;
 }
