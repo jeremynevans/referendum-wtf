@@ -20,3 +20,12 @@ p.score {
 p.score span {
   font-size: 56px;
 }
+
+button.btn-default {
+  border: #003399 1px solid;
+}
+
+button.btn-primary {
+  background: #003399;
+  color: #ffcc01;
+}

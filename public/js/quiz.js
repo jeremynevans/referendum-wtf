@@ -1,3 +1,5 @@
+var countdown;
+
 var score = 0;
 
 var currentRound = -1;
@@ -40,6 +42,7 @@ var newRound = function() {
 };
 
 var submitAnswer = function(thisButton) {
+  countdown.stop();
   $('.quiz .options').addClass('inactive');
   var submission = parseInt(thisButton.data('option'));
   console.log(submission);
@@ -55,7 +58,7 @@ var submitAnswer = function(thisButton) {
   if (currentRound+1 < rounds.length) {
     nextButtonMessage = 'Go to question ' + (currentRound+2);
   } else {
-    nextButtonMessage = 'And that\'s it! Now go check out your result!';
+    nextButtonMessage = 'And that\'s it - now check out your result!';
   }
   $('.quiz').append('<hr><button class="btn btn-primary btn-lg btn-block" onclick="newRound()">' + nextButtonMessage + '</button>');
   // newRound(round + 1);
@@ -69,7 +72,7 @@ $('.quiz').on('click', 'button.option-button', function() {
 
 
 var countdownInit = function() {
-  var countdown = $(".countdown").countdown360({
+  countdown = $(".countdown").countdown360({
     radius: 60,
     seconds: 10,
     label: ['sec', 'secs'],
