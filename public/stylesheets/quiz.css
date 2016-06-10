@@ -1,0 +1,22 @@
+.quiz {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.quiz h3 {
+  color: #003399;
+}
+
+.options.inactive {
+  pointer-events: none;
+}
+
+p.score {
+  font-size: 80px;
+  color: #003399;
+}
+p.score span {
+  font-size: 56px;
+}
