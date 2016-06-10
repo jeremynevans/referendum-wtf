@@ -1,0 +1,40 @@
+.quiz {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.quiz h1, .quiz h3 {
+  color: #003399;
+}
+
+.quiz h1 {
+  font-weight: bold;
+}
+
+.options.inactive {
+  pointer-events: none;
+}
+
+p.score {
+  font-size: 80px;
+  color: #ffcc01;
+}
+p.score span {
+  font-size: 56px;
+  color: white;
+}
+
+button.btn-default {
+  border: #003399 1px solid;
+}
+
+button.btn-primary {
+  background: #003399;
+  color: #ffcc01;
+}
+
+.result, .result h1, .result h2, .result h3, .result h4 {
+  color: white;
+}

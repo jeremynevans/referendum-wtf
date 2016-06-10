@@ -17,6 +17,10 @@ app.get('/issues', function(request, response) {
   response.render('pages/issues1');
 });
 
+app.get('/quiz', function(request, response) {
+  response.render('pages/quiz');
+});
+
 app.get('/issues_old', function(request, response) {
   response.render('pages/issues');
 });
