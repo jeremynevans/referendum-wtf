@@ -112,6 +112,21 @@ a:visited {
           display: block;
           margin-top: 10px; }
       }
+
+.jumbotron .btn-default-reverse {
+    border: solid 4px #ffcc01 !important;
+    background: #ffcc01 !important;
+    font-size: 18px; }
+    .jumbotron .btn:hover {
+      background: white !important;
+      border: solid 4px #ffcc01 !important; }
+      @media (max-width: 600px) {
+        .jumbotron .btn b {
+          display: block;
+          margin-top: 10px; }
+      }
+
+
   .jumbotron p {
     /*color: #d9ccee;*/
     font-weight: 300;
