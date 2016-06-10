@@ -88,6 +88,3 @@ var countdownInit = function() {
 
   countdown.start();
 }
-
-
-newRound(0);

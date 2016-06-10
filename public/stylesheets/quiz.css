@@ -5,8 +5,12 @@
   text-align: center;
 }
 
-.quiz h3 {
+.quiz h1, .quiz h3 {
   color: #003399;
+}
+
+.quiz h1 {
+  font-weight: bold;
 }
 
 .options.inactive {

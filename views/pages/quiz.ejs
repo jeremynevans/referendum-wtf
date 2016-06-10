@@ -9,7 +9,7 @@
 
 <body>
 
-  <div class="modal fade outOfTimeModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal fade outOfTimeModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="margin-top: 100px;">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -28,7 +28,10 @@
   <% include ../partials/nav.ejs %>
 
   <div class="quiz">
-    <button class="btn btn-default btn-lg btn-block option-button" data-option="0">£350m</button>
+    <h1 style="margin-top: 150px;">The Referendum.WTF EU Pub Quiz!</h1>
+    <h3>Read to start?</h3>
+    <hr>
+    <button class="btn btn-primary btn-lg btn-block" onclick="newRound()">Let's go!</button>
   </div>
 
   <script src="/js/jquery.js"></script>
