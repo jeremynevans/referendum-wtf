@@ -131,7 +131,18 @@ setTimeout(function() {
 $('body').on('click', '.tab-content a:not(.subsection-heading)', function() {
   var key = $(this).attr('href').split('#')[1];
   console.log(key);
-  window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: key }, "*");
+  try {
+         // Post message to the preview pane to let it now saving worked
+         if (window.frames['explaain'].postMessage) {
+           // e.g. Safari
+           window.frames['explaain'].postMessage({ action: 'open', id: '50' }, "*");
+         } else if (window.frames['explaain'].contentWindow.postMessage) {
+           // e.g. Chrome, Firefox
+           window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: '50' }, "*");
+         }
+       } catch (e) {
+         console.log(e);
+       }
 });
 
 $('.explaain-container').css('height', $(window).height());
