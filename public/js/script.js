@@ -129,7 +129,6 @@ setTimeout(function() {
 
 
 $('body').on('click', '.tab-content a:not(.subsection-heading)', function() {
-  console.log('hi');
   var key = $(this).attr('href').split('#')[1];
   console.log(key);
   window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: key }, "*");
