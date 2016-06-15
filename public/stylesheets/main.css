@@ -314,7 +314,8 @@ a:visited {
   .tabs {
     width: 100%;
   }
-  .tab-content a, .tab-content a:hover, .tab-content a:visited, .tab-content a:active {
+  .tab-content p.intro a, .tab-content p.intro a:hover, .tab-content p.intro a:visited, .tab-content p.intro a:active,
+  .tab-content .in-out a, .tab-content .in-out a:hover, .tab-content .in-out a:visited, .tab-content .in-out a:active {
     color: #333 !important;
     text-decoration: none;
     pointer-events: none;

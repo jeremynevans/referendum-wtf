@@ -36,8 +36,8 @@ var getPanelHTML = function(i, data) {
   subsectionsHTML1 = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">' + subsectionsHTML1 + '</div>';
   // var firstBit = i==0 ? ' in active' : '';
   // var panelHTML = '<div role="tabpanel" class="tab-pane fade' + firstBit + '" id="' + data.id + '1"><p>' + intro + inOut + '</p></div>';
-  var panelHTML = '<p>' + intro + '</p>' + inOut + subsectionsHTML;
-  var panelHTML1 = '<p>' + intro + '</p>' + inOut + subsectionsHTML1;
+  var panelHTML = '<p class="intro">' + intro + '</p>' + inOut + subsectionsHTML;
+  var panelHTML1 = '<p class="intro">' + intro + '</p>' + inOut + subsectionsHTML1;
   $('#' + data.id + '1').html(panelHTML1);
   $('#' + data.id).html(panelHTML);
   // $('.panel-title a').click(function() {
@@ -68,7 +68,7 @@ var getSubsectionHTML = function(data, desktop) {
   var inOut = getSubsectionInOutHTML(data, desktop);
   var comingsoon = '<div class="coming-soon"><h3>⌛ This section is coming&nbsp;soon..! ⌛</h3><h4>🙈 🙉 🙊 Don\'t miss out on getting involved - <b>help us</b> 📝 <b>write this section</b>! 📨 Email <a href="mailto:FOMO@referendum.wtf">FOMO@referendum.wtf</a></h4></div>'
   // data.comingsoon = false; //temporary
-  var content = data.comingsoon ? comingsoon : intro + inOut;
+  var content = data.comingsoon ? comingsoon : '<p class="intro">' + intro + '</p>' + inOut;
   // var firstBit = i==0 ? ' in active' : '';
   var panelHTML = '<div class="panel panel-default"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed subsection-heading"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title">' + data.title[0].value + '</h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"></a><div class="panel-body">' + content + '</div></div></div>';
   // var panelHTML = '<p>' + intro + inOut + '</p>';
