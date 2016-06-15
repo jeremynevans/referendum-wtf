@@ -109,8 +109,8 @@ a:visited {
       border: solid 4px #ffcc01 !important; }
       @media (max-width: 600px) {
         .jumbotron .btn b {
-          display: block;
-          margin-top: 10px; }
+          /*display: block;*/
+          margin-top: 0px; }
       }
 
 .jumbotron .btn-default-reverse {
@@ -122,16 +122,15 @@ a:visited {
       border: solid 4px #ffcc01 !important; }
       @media (max-width: 600px) {
         .jumbotron .btn b {
-          display: block;
-          margin-top: 10px; }
+          /*display: block;*/
+          margin-top: 0px; }
       }
 
 
   .jumbotron p {
-    /*color: #d9ccee;*/
-    font-weight: 300;
+    font-weight: 300; }
+  .jumbotron p.slogan {
     font-size: 24px;
-    /*max-width: 75%;*/
     margin: 1em auto 2em; }
   .navbar + .jumbotron {
     margin-top: -60px; }
@@ -279,7 +278,23 @@ a:visited {
   height: 100%;
 }
 
-
+.landing-video {
+  border: 2px solid #ffcc01;
+  border-radius: 8px;
+  margin: auto;
+  overflow: hidden;
+  width: 80vw;
+  height: 46vw;
+  max-width: 564px;
+  max-height: 319px;
+  margin-bottom: 30px;
+}
+.landing-video iframe {
+  width: 80vw;
+  height: 46vw;
+  max-width: 560px;
+  max-height: 315px;
+}
 
 
 
