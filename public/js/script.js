@@ -100,7 +100,16 @@ var boldify = function(text) {
   //                                 .replace(/\*([^*]+?)\*/g, '<b>$1<\/b>');
   var bolded = !text.length ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div><br>')
                                   .replace(/\*([^*]+?)\*/g, '$1');
+  var bolded = removeSplitLinks(bolded);
   return bolded;
+}
+
+var removeSplitLinks = function(text) {
+  console.log(text);
+  if (typeof text == "string") {
+    var removed = text.replace(/<\/a><a href=\"#[0-9]*\">/g,'');
+  }
+  return removed;
 }
 
 
