@@ -135,10 +135,10 @@ $('body').on('click', '.tab-content a:not(.subsection-heading)', function() {
          // Post message to the preview pane to let it now saving worked
          if (window.frames['explaain'].postMessage) {
            // e.g. Safari
-           window.frames['explaain'].postMessage({ action: 'open', id: '50' }, "*");
+           window.frames['explaain'].postMessage({ action: 'open', id: key }, "*");
          } else if (window.frames['explaain'].contentWindow.postMessage) {
            // e.g. Chrome, Firefox
-           window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: '50' }, "*");
+           window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: key }, "*");
          }
        } catch (e) {
          console.log(e);
