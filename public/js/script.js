@@ -105,7 +105,6 @@ var boldify = function(text) {
 }
 
 var removeSplitLinks = function(text) {
-  console.log(text);
   if (typeof text == "string") {
     var removed = text.replace(/<\/a><a href=\"#[0-9]*\">/g,'');
   }
