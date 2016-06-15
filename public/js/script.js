@@ -70,7 +70,7 @@ var getSubsectionHTML = function(data, desktop) {
   // data.comingsoon = false; //temporary
   var content = data.comingsoon ? comingsoon : intro + inOut;
   // var firstBit = i==0 ? ' in active' : '';
-  var panelHTML = '<div class="panel panel-default"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed subsection-heading">' + data.title[0].value + '</a></h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"><div class="panel-body">' + content + '</div></div></div>';
+  var panelHTML = '<div class="panel panel-default"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed subsection-heading"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title">' + data.title[0].value + '</h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"></a><div class="panel-body">' + content + '</div></div></div>';
   // var panelHTML = '<p>' + intro + inOut + '</p>';
   // $('#subsection-' + data.id + '1').html(panelHTML);
   // $('#subsection-' + data.id).html(panelHTML);
