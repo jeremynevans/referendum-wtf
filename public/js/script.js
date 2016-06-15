@@ -98,7 +98,7 @@ var boldify = function(text) {
   // bolded = bolded.replace(/\*/gi, "");
   // var bolded = !text.length ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div>')
   //                                 .replace(/\*([^*]+?)\*/g, '<b>$1<\/b>');
-  var bolded = !text.length ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div>')
+  var bolded = !text.length ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div><br>')
                                   .replace(/\*([^*]+?)\*/g, '$1');
   return bolded;
 }
