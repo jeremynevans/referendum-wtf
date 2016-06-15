@@ -277,11 +277,6 @@ a:visited {
 
 
 
-@media (min-width: 851px) {
-  .tabs-mobile-only {
-    /*width: 67%;*/
-  }
-}
 
 @media (min-width: 1040px) {
   .tabs-mobile-only {
@@ -312,7 +307,13 @@ a:visited {
     width: 100%;
   }
   .tabs {
-    width: 100%; }
+    width: 100%;
+  }
+  .tab-content a, .tab-content a:hover, .tab-content a:visited, .tab-content a:active {
+    color: #333 !important;
+    text-decoration: none;
+    pointer-events: none;
+  }
 }
 
 
