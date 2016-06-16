@@ -19,10 +19,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/cards/:author/:image/:text', function(request, response) {
+app.get('/cards/:image/:text', function(request, response) {
   var image = request.params.image.replace(/[^a-z0-9\.]/g, '');
   var text = request.params.text;
-  var author = request.params.author;
+  // var author = request.params.author;
 
   // var authorMark = client.buildURL("/~text", {
   //
@@ -33,10 +33,10 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     txtfont: 'avenir-black',
     txtalign: 'center',
     txtclr: 'fff',
-    txtsize: 30,
+    txtsize: 36,
     txtlead: 0,
     txtpad: 15,
-    bg: '66003399',
+    bg: '44000000',
     w: 700
   });
 
@@ -45,14 +45,12 @@ app.get('/cards/:author/:image/:text', function(request, response) {
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,
     markalign: 'center,middle',
-    txt: author + '`s Factogram:',
-    txtalign: 'top, center',
-    txtsize: 24,
-    txtclr: 'fff',
-    txtpad: 30,
-    // txtlineclr: 'ffffff',
-    // txtline: 1,
-    txtshad: 10,
+    // txt: author + '`s Factogram:',
+    // txtalign: 'top, center',
+    // txtsize: 24,
+    // txtclr: 'fff',
+    // txtpad: 30,
+    // txtshad: 10,
     fit: 'crop',
     blend64: blendWatermark,
     bw: 800,
