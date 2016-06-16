@@ -41,6 +41,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
   });
 
   var blendWatermark = 'http://referendum.wtf/img/generate/watermark.png';
+  var blendWatermark = '/watermark.png';
 
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,
