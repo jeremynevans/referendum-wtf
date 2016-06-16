@@ -32,7 +32,7 @@ app.get('/cards/:image/:text', function(request, response) {
     txtsize: 32,
     txtlead: 0,
     txtpad: 15,
-    bg: '44000000',
+    bg: '66000000',
     w: 700
   });
 
@@ -55,7 +55,7 @@ app.get('/cards/:image/:text', function(request, response) {
     bm: 'normal',
     // exp: '-3',
     w: 800,
-    h: 400
+    h: 380
   });
 
   // console.log(blendWatermark);
