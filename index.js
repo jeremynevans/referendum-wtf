@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/cards/:author/:image/:text', function(request, response) {
-  var image = request.params.image.replace(/[^a-z\.]/g, '');
+  var image = request.params.image.replace(/[^a-z0-9\.]/g, '');
   var text = request.params.text;
   var author = request.params.author;
 
@@ -41,7 +41,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
   });
 
   var blendWatermark = 'http://referendum.wtf/img/generate/watermark.png';
-  var blendWatermark = '/watermark.png';
+  // var blendWatermark = '/watermark.png';
 
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,
