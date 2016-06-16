@@ -33,36 +33,35 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     txtfont: 'avenir-black',
     txtalign: 'center',
     txtclr: 'fff',
-    txtsize: 24,
+    txtsize: 30,
     txtlead: 0,
     txtpad: 15,
     bg: '66003399',
-    w: 500
+    w: 700
   });
 
   var blendWatermark = 'http://referendum.wtf/img/generate/watermark.png';
-  // var blendWatermark = '/watermark.png';
 
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,
     markalign: 'center,middle',
-    txt: 'Created by ' + author,
-    txtalign: 'center%2Cbottom',
-    txtsize: 20,
+    txt: author + '`s Factogram:',
+    txtalign: 'top, center',
+    txtsize: 24,
     txtclr: 'fff',
-    txtpad: 90,
+    txtpad: 30,
     // txtlineclr: 'ffffff',
     // txtline: 1,
     txtshad: 10,
     fit: 'crop',
     blend64: blendWatermark,
-    bw: 600,
+    bw: 800,
     ba: 'bottom, center',
     balph: 100,
     bm: 'normal',
     // exp: '-3',
-    w: 600,
-    h: 400
+    w: 800,
+    h: 600
   });
 
   // console.log(blendWatermark);
