@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/cards/:image/:text', function(request, response) {
+app.get('/cards/:author/:image/:text', function(request, response) {
   var image = request.params.image.replace(/[^a-z0-9\.]/g, '');
   var text = request.params.text;
   var author = request.params.author;
