@@ -19,43 +19,41 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/cards/:image/:text', function(request, response) {
+app.get('/cards/:author/:image/:text', function(request, response) {
   var image = request.params.image.replace(/[^a-z\.]/g, '');
   var text = request.params.text;
+  var author = request.params.author;
 
-  var mark = client.buildURL("/~text", {
+  // var authorMark = client.buildURL("/~text", {
+  //
+  // });
+
+  var factMark = client.buildURL("/~text", {
     txt64: text,
-    // bg: 'dd0AAFE2',
-    // txtclr: 'fff',
-    // txtsize: 28,
-    // w: 500,
-    // txtpad: 20,
-    // txtfont: 'avenir-black',
-    // txtalign: 'center'
-
-    w: '500',
+    txtfont: 'avenir-black',
+    txtalign: 'center',
     txtclr: 'fff',
-    txtsize: '24',
-    txtlead: '0',
-    txtpad: '15',
-    bg: '80002228',
-    txtfont: 'Avenir-Heavy'
+    txtsize: 24,
+    txtlead: 0,
+    txtpad: 15,
+    bg: '66003399',
+    w: 500
   });
 
   var imageUrl = client.buildURL("/" + image, {
-    // w: 400,
-    // h: 300,
-    // txtsize: 14,
-    // txtclr: 'ff0',
-    // txtalign: 'center%2Cbottom',
-    mark: mark,
-
-    txtsize: '14',
-    txtclr: 'ff0',
-    txtalign: 'center%2Cmiddle',
+    mark: factMark,
+    markalign: 'center,middle',
+    txt: 'Factogram created by ' + author,
+    txtalign: 'center%2Cbottom',
+    txtsize: 20,
+    txtclr: 'ffcc01',
+    txtpad: 30,
+    txtshad: 10,
     fit: 'crop',
-    exp: '-3',
-    w: '600'
+    // blend: 'watermark.png',
+    // exp: '-3',
+    w: 600,
+    h: 400
   });
 
   var tweet = 'https://twitter.com/intent/tweet?text=%23AreEUReady%20for%20the%20Referendum%3F%20Thought%20not%2C%20so%20check%20out%20referendum.wtf%20...%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
