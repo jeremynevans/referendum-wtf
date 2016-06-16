@@ -33,7 +33,7 @@ app.get('/cards/:image/:text', function(request, response) {
     txtfont: 'avenir-black',
     txtalign: 'center',
     txtclr: 'fff',
-    txtsize: 36,
+    txtsize: 32,
     txtlead: 0,
     txtpad: 15,
     bg: '44000000',
