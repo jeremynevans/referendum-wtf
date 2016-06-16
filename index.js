@@ -59,7 +59,7 @@ app.get('/cards/:image/:text', function(request, response) {
     bm: 'normal',
     // exp: '-3',
     w: 800,
-    h: 600
+    h: 400
   });
 
   // console.log(blendWatermark);
