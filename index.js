@@ -60,7 +60,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
 
   // console.log(blendWatermark);
 
-  var tweet = 'https://twitter.com/intent/tweet?text=%23AreEUReady%20for%20the%20Referendum%3F%20Thought%20not%2C%20so%20check%20out%20referendum.wtf%20...%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
+  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf...%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
 
   response.render('pages/card', { imageUrl: imageUrl, text: text, author: author, tweet: tweet });
 
