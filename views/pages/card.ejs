@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@referendum_wtf">
+  <meta name="twitter:creator" content="@referendum_wtf">
+  <meta name="twitter:title" content="Referendum.wtf">
+  <meta name="twitter:description" content="<%= text %>">
+  <meta name="twitter:image" content="<%= imageUrl %>">
+</head>
+<body>
+  <img src="<%= imageUrl %>" alt="<%= text %>"/>
+</body>
+</html>
