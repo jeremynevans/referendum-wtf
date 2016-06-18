@@ -1,5 +1,5 @@
 body {
-  padding: 40px;
+  padding: 5vw;
   text-align: center;
   background: #eee;
 }
@@ -7,7 +7,7 @@ body {
 .card {
   max-width: 600px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 6vw;
   border: 1px solid #003399;
   border-radius: 8px;
   background: #f8f8f8;
