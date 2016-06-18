@@ -1,17 +1,21 @@
 body {
   padding: 40px;
   text-align: center;
-  color: #003399;
+  background: #eee;
 }
 
 .card {
-  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
   border: 1px solid #003399;
   border-radius: 8px;
+  background: #f8f8f8;
 }
 
 .card img {
-  max-width: 500px;
+  display: block;
+  max-width: 100%;
+  margin: 20px auto 25px;
   border-radius: 8px;
-  margin-bottom: 15px 0 30px;
 }
