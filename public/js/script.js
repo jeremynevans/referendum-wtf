@@ -20,12 +20,12 @@ $.doctop({
         e.stopPropagation();
       });
       $('.dropdown').on('shown.bs.dropdown', function () {
-        console.log('ih');
+        var myWidth = $('ul.thumbnails').width() * 1.05;
         $('ul.thumbnails').masonry({
           itemSelector: 'ul.thumbnails li',
-          columnWidth: 220
+          columnWidth: myWidth
         });
-      })
+      });
     }
   }
 });
@@ -63,30 +63,29 @@ var getPanelHTML = function(i, data) {
 };
 
 var getFactogramCreator = function(fact) {
-  var text = textify(fact);
   var button =    '<div class="dropdown">'
-                + '  <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
-                + '    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+                + '  <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+                + '    <i class="fa fa-external-link-square" aria-hidden="true"></i> Factogram'
                 + '  </button>'
-                + '    <ul class="dropdown-menu" aria-labelledby="dLabel">'
-                + '      <div class="input-group">'
-                + '        <input type="text" class="form-control userName" placeholder="Your Name">'
-                + '        <span class="input-group-btn">'
-                + '          <button class="btn btn-default openFactogram" onclick="openFactogram($(this));">Create Your Factogram!</button>'
-                + '        </span>'
-                + '      </div>'
-                + '  <div class="thumbnails-container">'
-                + '      <select class="imageSelect">'
-                + '        <option data-img-src="/img/generate/boris2.jpg" value="boris2.jpg">boris2.jpg</option>'
-                + '        <option data-img-src="/img/generate/dave.jpg" value="dave.jpg">dave.jpg</option>'
-                + '        <option data-img-src="/img/generate/nigel.jpg" value="nigel.jpg">nigel.jpg</option>'
-                + '        <option data-img-src="/img/generate/george.jpg" value="george.jpg">george.jpg</option>'
-                + '        <option data-img-src="/img/generate/boris3.jpg" value="boris3.jpg">boris3.jpg</option>'
-                + '        <option data-img-src="/img/generate/boris4.jpg" value="boris4.jpg">boris4.jpg</option>'
-                + '        <option data-img-src="/img/generate/boris.jpg" value="boris.jpg">boris.jpg</option>'
-                + '      </select>'
-                + '  </div>'
-                + '    </ul>'
+                + '  <ul class="dropdown-menu" aria-labelledby="dLabel">'
+                + '    <div class="input-group">'
+                + '      <input type="text" class="form-control userName" placeholder="Your Name">'
+                + '      <span class="input-group-btn">'
+                + '        <button class="btn btn-default openFactogram" onclick="openFactogram($(this));">Create<span class="mobile-hide"> Your Factogram</span>!</button>'
+                + '      </span>'
+                + '    </div>'
+                + '    <div class="thumbnails-container">'
+                + '        <select class="imageSelect">'
+                + '          <option data-img-src="/img/generate/boris2.jpg" value="boris2.jpg">boris2.jpg</option>'
+                + '          <option data-img-src="/img/generate/dave.jpg" value="dave.jpg">dave.jpg</option>'
+                + '          <option data-img-src="/img/generate/nigel.jpg" value="nigel.jpg">nigel.jpg</option>'
+                + '          <option data-img-src="/img/generate/george.jpg" value="george.jpg">george.jpg</option>'
+                + '          <option data-img-src="/img/generate/boris3.jpg" value="boris3.jpg">boris3.jpg</option>'
+                + '          <option data-img-src="/img/generate/boris4.jpg" value="boris4.jpg">boris4.jpg</option>'
+                + '          <option data-img-src="/img/generate/boris.jpg" value="boris.jpg">boris.jpg</option>'
+                + '        </select>'
+                + '    </div>'
+                + '  </ul>'
                 + '</div>';
   return button;
 }
@@ -98,7 +97,7 @@ $('.tabs-container').on('click', 'button.openFactogram', function() {
 var openFactogram = function(thisButton) {
   var name = thisButton.closest('.dropdown-menu').find('input.userName').val() || 'Captain';
   var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
-  var text = thisButton.closest('li.bulletFact').find('div.body').text();
+  var text = thisButton.closest('li.bulletFact').find('div.body > p').text();
   var url = '/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
   window.open(url,'_blank');
 }
@@ -149,17 +148,9 @@ var getSubsectionInOutHTML = function(data) {
   return inOutHTML;
 };
 
-var textify = function(text) {
-  text = strip(text.replace(/\*/g, ''));//.replace(/<.*>/g, '');
-  return text;
-}
-
 var boldify = function(text) {
-  // bolded=text.replace(/\*.+\*/gi, function myFunction(x){return '<b>' + x + '</b>';});
-  // bolded = bolded.replace(/\*/gi, "");
-  // var bolded = !text.length ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div>')
-  //                                 .replace(/\*([^*]+?)\*/g, '<b>$1<\/b>');
-  var bolded = !text.length ? text : text.replace(/\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1<\/div><br>')
+  text = '<p>' + text + '</p>';
+  var bolded = !text.length ? text : text.replace(/<p>(.*)\*\*([^*]+?)\*\*/g, '<div class="bullet-heading">$1$2<\/div><br><p>')
                                   .replace(/\*([^*]+?)\*/g, '$1');
   var bolded = removeSplitLinks(bolded);
   return bolded;

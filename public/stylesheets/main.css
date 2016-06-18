@@ -339,6 +339,7 @@ a:visited {
 
 .dropdown-menu {
   width: 462px;
+  max-width: 75vw;
   padding: 10px;
 }
 .dropdown-menu .input-group {
@@ -349,8 +350,8 @@ a:visited {
   height: 250px;
 }
 ul.thumbnails.image_picker_selector li {
-  max-width: 200px;
-  margin: 10px;
+  max-width: 48%;
+  margin: 1%;
   float: left;
 }
 ul.thumbnails.image_picker_selector li .thumbnail {
@@ -364,6 +365,17 @@ ul.thumbnails.image_picker_selector li .thumbnail.selected {
   background: #2277dd;
 }
 
+
+.bullet-options i {
+  /*color: #003399;*/
+}
+
+
+@media (max-width: 450px) {
+  .mobile-hide {
+    display: none;
+  }
+}
 
 
 
