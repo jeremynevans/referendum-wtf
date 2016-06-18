@@ -33,7 +33,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     txtlead: 0,
     txtpad: 15,
     bg: '66000000',
-    w: 700
+    w: 650
   });
 
   var blendWatermark = 'http://referendum.wtf/img/generate/watermark2.png';
@@ -60,7 +60,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
 
   // console.log(blendWatermark);
 
-  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf...%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
+  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
 
   response.render('pages/card', { imageUrl: imageUrl, text: text, author: author, tweet: tweet });
 

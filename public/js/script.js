@@ -11,6 +11,21 @@ $.doctop({
       myData = d.copy.archie.sections;
       console.log(myData);
       getAllPanelsHTML(myData);
+      $("select").imagepicker();
+      $('ul.thumbnails').masonry({
+        itemSelector: 'ul.thumbnails li',
+        columnWidth: 220
+      });
+      $('.dropdown > ul').on('click', function(e) {
+        e.stopPropagation();
+      });
+      $('.dropdown').on('shown.bs.dropdown', function () {
+        console.log('ih');
+        $('ul.thumbnails').masonry({
+          itemSelector: 'ul.thumbnails li',
+          columnWidth: 220
+        });
+      })
     }
   }
 });
@@ -47,15 +62,56 @@ var getPanelHTML = function(i, data) {
   return panelHTML;
 };
 
+var getFactogramCreator = function(fact) {
+  var text = textify(fact);
+  var button =    '<div class="dropdown">'
+                + '  <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+                + '    Factogram'
+                + '  </button>'
+                + '    <ul class="dropdown-menu" aria-labelledby="dLabel">'
+                + '      <div class="input-group">'
+                + '        <input type="text" class="form-control userName" placeholder="Your Name">'
+                + '        <span class="input-group-btn">'
+                + '          <button class="btn btn-default openFactogram" onclick="openFactogram($(this));">Create Your Factogram!</button>'
+                + '        </span>'
+                + '      </div>'
+                + '  <div class="thumbnails-container">'
+                + '      <select class="imageSelect">'
+                + '        <option data-img-src="/img/generate/boris2.jpg" value="boris2.jpg">boris2.jpg</option>'
+                + '        <option data-img-src="/img/generate/dave.jpg" value="dave.jpg">dave.jpg</option>'
+                + '        <option data-img-src="/img/generate/nigel.jpg" value="nigel.jpg">nigel.jpg</option>'
+                + '        <option data-img-src="/img/generate/george.jpg" value="george.jpg">george.jpg</option>'
+                + '        <option data-img-src="/img/generate/boris3.jpg" value="boris3.jpg">boris3.jpg</option>'
+                + '        <option data-img-src="/img/generate/boris4.jpg" value="boris4.jpg">boris4.jpg</option>'
+                + '        <option data-img-src="/img/generate/boris.jpg" value="boris.jpg">boris.jpg</option>'
+                + '      </select>'
+                + '  </div>'
+                + '    </ul>'
+                + '</div>';
+  return button;
+}
+
+$('.tabs-container').on('click', 'button.openFactogram', function() {
+  openFactogram($(this));
+})
+
+var openFactogram = function(thisButton) {
+  var name = thisButton.closest('.dropdown-menu').find('input.userName').val();
+  var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val();
+  var text = thisButton.closest('li.bulletFact').find('div.body').text();
+  var url = 'http://referendum.wtf/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
+  window.open(url,'_blank');
+}
+
 var getInOutHTML = function(data) {
   var allInOutHTML = '';
   var inHTML = '';
   var outHTML = '';
   $.each(data.in, function(i, e) {
-    inHTML += '<li>' + boldify(e.bullet) + '</li>';
+    inHTML += '<li class="bulletFact"><div class="body">' + boldify(e.bullet) + '</div>' + getFactogramCreator(e.bullet) + '</li>';
   });
   $.each(data.out, function(i, e) {
-    outHTML += '<li>' + boldify(e.bullet) + '</li>';
+    outHTML += '<li class="bulletFact"><div class="body">' + boldify(e.bullet) + '</div>' + getFactogramCreator(e.bullet) + '</li>';
   });
   inHTML = '<div class="in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
   outHTML = '<div class="out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
@@ -93,6 +149,11 @@ var getSubsectionInOutHTML = function(data) {
   return inOutHTML;
 };
 
+var textify = function(text) {
+  text = strip(text.replace(/\*/g, ''));//.replace(/<.*>/g, '');
+  return text;
+}
+
 var boldify = function(text) {
   // bolded=text.replace(/\*.+\*/gi, function myFunction(x){return '<b>' + x + '</b>';});
   // bolded = bolded.replace(/\*/gi, "");
@@ -109,6 +170,13 @@ var removeSplitLinks = function(text) {
     var removed = text.replace(/<\/a><a href=\"#[0-9]*\">/g,'');
   }
   return removed;
+}
+
+function strip(html)
+{
+   var tmp = document.createElement("DIV");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
 }
 
 

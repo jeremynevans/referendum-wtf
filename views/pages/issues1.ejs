@@ -2,11 +2,14 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.2.min.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/image-picker.css" />
   <% include ../partials/header.ejs %>
   <script type="text/javascript" src="/js/jquery.mobile-1.4.2.min.js"></script>
   <script src="/js/doctop.min.js"></script>
   <script src="/js/archieml.js"></script>
   <script src="/js/backupData1.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script src="/js/image-picker.min.js"></script>
   <script src="/js/script.js"></script>
 </head>
 
@@ -23,8 +26,6 @@
     </h1>
   </div>
 </div>
-
-
 
 <div class="tabs-container">
   <div class="tabs tabs-desktop-only">
@@ -123,7 +124,7 @@
 
   <script>
     setTimeout(function() {
-      $('#myModal').modal()
+      // $('#myModal').modal()
     },2000);
   </script>
 

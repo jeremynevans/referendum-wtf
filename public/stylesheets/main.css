@@ -179,12 +179,12 @@ a:visited {
           font-size: 1em;
           font-weight: 900;
           color: #003399; }
-        .tabs .tab-content .in-out ul {
+        .tabs .tab-content .in-out > div > ul {
           padding-left: 30px; }
-          .tabs .tab-content .in-out li {
+          .tabs .tab-content .in-out > div > ul > li {
             margin-bottom: 20px;
             display: block; }
-            .tabs .tab-content .in-out li:before {
+            .tabs .tab-content .in-out > div > ul > li:before {
               /*Using a Bootstrap glyphicon as the bullet point*/
               content: "\20ac";
               font-family: 'Glyphicons Halflings';
@@ -336,6 +336,35 @@ a:visited {
     pointer-events: none;
   }
 }
+
+.dropdown-menu {
+  width: 462px;
+  padding: 10px;
+}
+.dropdown-menu .input-group {
+  margin: 10px;
+}
+.thumbnails-container {
+  overflow: scroll;
+  height: 250px;
+}
+ul.thumbnails.image_picker_selector li {
+  max-width: 200px;
+  margin: 10px;
+  float: left;
+}
+ul.thumbnails.image_picker_selector li .thumbnail {
+  cursor: pointer;
+  margin: 0;
+}
+ul.thumbnails.image_picker_selector li .thumbnail:hover {
+  background: #66aaff;
+}
+ul.thumbnails.image_picker_selector li .thumbnail.selected {
+  background: #2277dd;
+}
+
+
 
 
 /* Undoing annoying things from jQuery Mobile */
