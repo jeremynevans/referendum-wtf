@@ -9,13 +9,6 @@ var client = new ImgixClient({
 
 
 var fs = require('fs');
-// fs.realpath(__dirname, function(err, path) {
-//     if (err) {
-//         console.log(err);
-//      return;
-//     }
-//     console.log('Path is : ' + path);
-// });
 fs.readdir(__dirname + '/public/img/generate', function(err, files) {
     if (err) return;
     files.forEach(function(f) {
