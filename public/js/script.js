@@ -96,8 +96,8 @@ $('.tabs-container').on('click', 'button.openFactogram', function() {
 })
 
 var openFactogram = function(thisButton) {
-  var name = thisButton.closest('.dropdown-menu').find('input.userName').val();
-  var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val();
+  var name = thisButton.closest('.dropdown-menu').find('input.userName').val() || 'Captain';
+  var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
   var text = thisButton.closest('li.bulletFact').find('div.body').text();
   var url = 'http://referendum.wtf/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
   window.open(url,'_blank');

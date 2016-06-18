@@ -8,9 +8,13 @@
   <meta name="twitter:title" content="<%= author %>'s Factogram">
   <meta name="twitter:description" content="Fact: <%= text %>">
   <meta name="twitter:image" content="<%= imageUrl %>">
+  <link rel="stylesheet" type="text/css" href="stylesheets/card.css" />
 </head>
 <body>
-  <p>Here is an image to tweet:</p>
-  <a target="_blank" href="<%= tweet %>"><img src="<%= imageUrl %>" alt="<%= text %>" style="max-width: 500px;"/></a>
+  <p>Here's your Factogram, <%= author %>!</p>
+  <div class="card">
+    <img src="<%= imageUrl %>" alt="<%= text %>" style="max-width: 500px;"/>
+  </div>
+  <a target="_blank" href="<%= tweet %>" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"> Tweet your factogram!</a>
 </body>
 </html>
