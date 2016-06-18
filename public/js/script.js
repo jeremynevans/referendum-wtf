@@ -66,7 +66,7 @@ var getFactogramCreator = function(fact) {
   var text = textify(fact);
   var button =    '<div class="dropdown">'
                 + '  <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
-                + '    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>'
+                + '    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
                 + '  </button>'
                 + '    <ul class="dropdown-menu" aria-labelledby="dLabel">'
                 + '      <div class="input-group">'
@@ -99,7 +99,7 @@ var openFactogram = function(thisButton) {
   var name = thisButton.closest('.dropdown-menu').find('input.userName').val() || 'Captain';
   var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
   var text = thisButton.closest('li.bulletFact').find('div.body').text();
-  var url = 'http://referendum.wtf/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
+  var url = '/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
   window.open(url,'_blank');
 }
 
