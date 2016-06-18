@@ -2,21 +2,55 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
+
+  <title><%= author %>'s Factogram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@referendum_wtf">
   <meta name="twitter:creator" content="@referendum_wtf">
   <meta name="twitter:title" content="<%= author %>'s Factogram">
   <meta name="twitter:description" content="Fact: <%= text %>">
   <meta name="twitter:image" content="<%= imageUrl %>">
+
+  <meta property="og:url"           content="<%= cardUrl %>" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="<%= author %>'s Factogram" />
+	<meta property="og:description"   content="Fact: <%= text %>" />
+	<meta property="og:image"         content="<%= imageUrl %>" />
+
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="/img/eu-wtf-circle.png">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/card.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 </head>
+
 <body>
   <div class="card">
     <p>Here's your Factogram, <%= author %>:</p>
     <img src="<%= imageUrl %>" alt="<%= text %>"/>
     <a target="_blank" href="<%= tweet %>" class="btn btn-lg btn-default">
-      <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Tweet your factogram!
+      <i class="fa fa-twitter" aria-hidden="true"></i> Tweet-o-gram
     </a>
+    <button class="btn btn-lg btn-default fb-button">
+      <i class="fa fa-facebook" aria-hidden="true"></i> Factbook
+    </button>
+    <button class="btn btn-lg btn-default ig-button">
+      <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
+    </button>
   </div>
+  <script>
+  $(".fb-button").on("click",function(){
+      var fbpopup = window.open("https://www.facebook.com/sharer/sharer.php?u=<%= cardUrl %>", "pop", "width=600, height=400, scrollbars=no");
+      return false;
+  });
+  </script>
 </body>
 </html>

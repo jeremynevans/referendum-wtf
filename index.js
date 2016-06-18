@@ -7,6 +7,26 @@ var client = new ImgixClient({
   secureURLToken: "KuKMWSurQr6lFYsX"
 });
 
+
+var fs = require('fs');
+// fs.realpath(__dirname, function(err, path) {
+//     if (err) {
+//         console.log(err);
+//      return;
+//     }
+//     console.log('Path is : ' + path);
+// });
+fs.readdir(__dirname + '/public/img/generate', function(err, files) {
+    if (err) return;
+    files.forEach(function(f) {
+        console.log('Files: ' + f);
+    });
+});
+
+
+
+
+
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
@@ -22,7 +42,9 @@ app.get('/', function(request, response) {
 app.get('/cards/:author/:image/:text', function(request, response) {
   var image = request.params.image.replace(/[^a-z0-9\.]/g, '');
   var text = request.params.text;
-  var author = request.params.author;
+  var author = request.params.author.replace(/[^a-zA-Z0-9\.]/g, '');
+
+  //   Security!!!
 
   var factMark = client.buildURL("/~text", {
     txt64: text,
@@ -36,7 +58,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     w: 650
   });
 
-  var blendWatermark = 'http://referendum.wtf/img/generate/watermark2.png';
+  var blendWatermark = '/img/watermark.png';
 
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,
@@ -58,26 +80,15 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     h: 380
   });
 
+
+  // var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
+
   // console.log(blendWatermark);
+  var cardUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
+  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf%21%20' + encodeURIComponent(cardUrl) + '&source=webclient';
 
-  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
+  response.render('pages/card', { cardUrl: cardUrl, imageUrl: imageUrl, text: text, author: author, tweet: tweet });
 
-  response.render('pages/card', { imageUrl: imageUrl, text: text, author: author, tweet: tweet });
-
-// var textUrl = 'https://assets.imgix.net/~text64?w=500&txtclr=fff&txt64=' + textFixed + '&txtsize=24&txtlead=0&txtpad=15&bg=80002228&txtfont=Avenir-Heavy';
-// var imageUrl = 'https://referendum-wtf.imgix.net/' + encodeURIComponent(image) + '?txtsize=14&txtclr=ff0&txtalign=center%2Cbottom&txt64=' + encodeURIComponent(new Buffer(brand).toString('base64')) + '&txtfont64=SGVsdmV0aWNhTmV1ZS1NZWRpdW0&markalign=center%2Cmiddle&mark64=' + textUrl + '&fit=crop&exp=-3&w=600';
-/*
-  //Security
-  var brand = 'Referendum.wtf'
-  var textFixed = text.replace(/[^\x00-\x7F]/g, "").trim();
-  var textUrl = 'https://assets.imgix.net/~text64?w=500&txtclr=fff&txt64=' + textFixed + '&txtsize=24&txtlead=0&txtpad=15&bg=80002228&txtfont=Avenir-Heavy';
-  // var imageUrl = 'https://referendum-wtf.imgix.net/' + encodeURIComponent(image) + '?txtsize=14&txtclr=ff0&txtalign=center%2Cbottom&txt64=' + encodeURIComponent(new Buffer(brand).toString('base64')) + '&txtfont64=SGVsdmV0aWNhTmV1ZS1NZWRpdW0&markalign=center%2Cmiddle&mark64=' + encodeURIComponent(new Buffer(textUrl).toString('base64')) + '&fit=crop&exp=-3&w=600';
-  var watermark = 'https://assets.imgix.net/~text?txt64=RVZFTiBUSEUgQUxMLVBPV0VSRlVMIFBPSU5USU5HIEhBUyBOTyBDT05UUk9MIEFCT1VUIFRIRSBCTElORCBURVhUUw&bg=dd0AAFE2&txtclr=fff&txtsize=28&w=500&txtpad=20&txtfont=avenir-black&txtalign=center';
-  var watermark64 = encodeURIComponent(new Buffer(watermark).toString('base64'));
-  var imageUrl = 'https://referendum-wtf.imgix.net/' + encodeURIComponent(image) + '?txtsize=14&txtclr=ff0&txtalign=center%2Cbottom&txt64=' + encodeURIComponent(new Buffer(brand).toString('base64')) + '&txtfont64=SGVsdmV0aWNhTmV1ZS1NZWRpdW0&markalign=center%2Cmiddle&mark64=' + textUrl + '&fit=crop&exp=-3&w=600';
-  var tweet = 'https://twitter.com/intent/tweet?text=%23AreEUReady%20for%20the%20Referendum%3F%20Thought%20not%2C%20so%20check%20out%20referendum.wtf%20...%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
-  response.render('pages/card', { imageUrl: textUrl, text: text, tweet: tweet });
-*/
 });
 
 app.get('/issues', function(request, response) {

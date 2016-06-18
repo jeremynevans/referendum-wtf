@@ -12,18 +12,19 @@ $.doctop({
       console.log(myData);
       getAllPanelsHTML(myData);
       $("select").imagepicker();
+      // var myWidth = $('ul.thumbnails').width() * 1.05;
       $('ul.thumbnails').masonry({
         itemSelector: 'ul.thumbnails li',
-        columnWidth: 220
+        // columnWidth: myWidth
       });
       $('.dropdown > ul').on('click', function(e) {
         e.stopPropagation();
       });
       $('.dropdown').on('shown.bs.dropdown', function () {
-        var myWidth = $('ul.thumbnails').width() * 1.05;
+        // var myWidth = $('ul.thumbnails').width() * 1.05;
         $('ul.thumbnails').masonry({
           itemSelector: 'ul.thumbnails li',
-          columnWidth: myWidth
+          // columnWidth: myWidth
         });
       });
     }
