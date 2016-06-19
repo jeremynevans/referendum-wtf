@@ -455,6 +455,31 @@ ul.thumbnails.image_picker_selector li .thumbnail.selected {
 
 
 
+.red-herrings {
+  border: 2px solid #cc0000;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.red-herrings h4 {
+  text-align: center;
+  font-size: 24px;
+  color: #cc0000;
+  font-weight: 600;
+}
+.red-herrings h5 {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: #cc0000;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+
+
+
 /* Undoing annoying things from jQuery Mobile */
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
  text-shadow: none;

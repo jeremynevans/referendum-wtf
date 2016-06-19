@@ -52,8 +52,12 @@ var getPanelHTML = function(i, data) {
   subsectionsHTML1 = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">' + subsectionsHTML1 + '</div>';
   // var firstBit = i==0 ? ' in active' : '';
   // var panelHTML = '<div role="tabpanel" class="tab-pane fade' + firstBit + '" id="' + data.id + '1"><p>' + intro + inOut + '</p></div>';
-  var panelHTML = '<p class="intro">' + intro + '</p>' + inOut + subsectionsHTML;
-  var panelHTML1 = '<p class="intro">' + intro + '</p>' + inOut + subsectionsHTML1;
+  var redHerringHTML = '';
+  if (data.redherrings) {
+    redHerringHTML = '<div class="red-herrings"><h4>Red Herrings</h4><h5>Dodgy claims to watch out for</h5><p>' + data.redherrings + '</p></div>';
+  }
+  var panelHTML = '<p class="intro">' + intro + '</p>' + inOut + redHerringHTML + subsectionsHTML;
+  var panelHTML1 = '<p class="intro">' + intro + '</p>' + inOut + redHerringHTML + subsectionsHTML1;
   $('#' + data.id + '1').html(panelHTML1);
   $('#' + data.id).html(panelHTML);
   // $('.panel-title a').click(function() {
@@ -104,7 +108,7 @@ var getFactogramCreator = function(fact) {
                   + '     </ul>'
                   + '   </div>'
                   + ' </div>'
-                  + ' <button type="button" class="btn btn-default sources-button" data-toggle="tooltip" data-placement="bottom" title="Get sources"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></button>'
+                  // + ' <button type="button" class="btn btn-default sources-button" data-toggle="tooltip" data-placement="bottom" title="Get sources"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></button>'
   return button;
 }
 
