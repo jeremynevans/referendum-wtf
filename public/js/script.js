@@ -65,7 +65,7 @@ var getPanelHTML = function(i, data) {
 
 var getFactogramCreator = function(fact) {
   var button =    ''
-                  + ' Share: '
+                  + ' <span style="font-size:14px;">Share:&nbsp;&nbsp;</span>'
                   + ' <div class="btn-group" role="group">'
                   + '   <div class="btn-group dropdown" role="group">'
                   + '     <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
@@ -91,10 +91,26 @@ var getFactogramCreator = function(fact) {
                   + '       </div>'
                   + '     </ul>'
                   + '   </div>'
-                  + '   <button class="btn btn-default bullet-options" type="button">'
-                  + '     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Post'
-                  + '   </button>'
-                  + ' </div>'
+                  + '   <div class="btn-group" role="group">'
+                  + '     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+                  + '       <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Post'
+                  + '     </button>'
+                  + '     <ul class="dropdown-menu" style="padding: 0; border: none; background: none; box-shadow: none;">'
+                  + '       <div class="btn-group-vertical" role="group" aria-label="...">'
+                  + '         <button type="button" class="btn btn-default"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button>'
+                  + '         <button type="button" class="btn btn-default"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button>'
+                  + '         <button type="button" class="btn btn-default"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</button>'
+                  + '       </div>'
+                  + '     </ul>'
+                  + '   </div>'
+                  // + '   <div class="btn-group dropdown dropdown-post" role="group">'
+                  // + '     <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+                  // + '     </button>'
+                  // + '     <ul class="dropdown-menu" aria-labelledby="dLabel">'
+                  // + '       Hello'
+                  // + '     </ul>'
+                  // + '   </div>'
+                  + ' </div>';
   return button;
 }
 

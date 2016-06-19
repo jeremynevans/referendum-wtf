@@ -342,8 +342,15 @@ a:visited {
   max-width: 75vw;
   padding: 10px;
 }
+@media (max-width: 550px) {
+  .dropdown-menu {
+    margin-left: -109px;
+    max-width: 95vw;
+    width: 95vw;
+  }
+}
 .dropdown-menu .input-group {
-  margin: 10px;
+  margin: 5px 5px 10px 5px;
 }
 .thumbnails-container {
   overflow: scroll;
