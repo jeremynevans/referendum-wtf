@@ -271,11 +271,29 @@ a:visited {
   position: fixed;
   top: 0;
 }
+.explaain-box-header {
+  margin: auto;
+  text-align: center;
+}
+.explaain-box-header button.explaain-close {
+  display: none;
+  margin: auto;
+}
+.explaain-header-logo {
+  display: block;
+  width: 60%;
+  margin: 30px auto;
+}
+.explaain-header-logo:hover {
+  opacity: 0.8;
+}
 
 .explaain-box {
   border-radius: 8px;
   border: 1px solid #ddd;
   height: 100%;
+  overflow: hidden;
+  background: #eee;
 }
 
 .landing-video {
@@ -298,21 +316,30 @@ a:visited {
 
 
 
-@media (min-width: 1040px) {
+/*@media (min-width: 1040px) {*/
   .tabs-mobile-only {
     display: none;
+  }
+/*}*/
+
+@media (max-width: 1200px) {
+  .tabs-container .nav>li>a {
+    font-size: 1.4vw;
   }
 }
 
 @media (max-width: 1039px) {
   .tabs.tabs-desktop-only {
-    display: none;
+    /*display: none;*/
   }
-}
-
-@media (max-width: 1200px) {
-  .tabs.tabs-desktop-only .nav>li>a {
-    font-size: 1.4vw;
+  .tabs-container .nav-tabs>li {
+    width: 50%;
+  }
+  .tabs-container .nav-tabs>li>a {
+    border: 1px solid #ddd;
+    margin-right: 0px;
+    text-align: center;
+    font-size: 16px;
   }
 }
 
@@ -322,6 +349,27 @@ a:visited {
   }
   .explaain-container {
     display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 30px;
+    width: auto;
+    z-index: 1000;
+    background: rgba(187,187,187,0.75);
+  }
+  .explaain-header-logo {
+    margin: 10px auto 0;
+  }
+  .explaain-box {
+    max-width: 400px;
+    margin: auto;
+    border: none;
+    background: transparent;
+  }
+  .explaain-box-header button.explaain-close {
+    display: block;
   }
   .friends-container .well {
     width: 100%;
@@ -329,18 +377,28 @@ a:visited {
   .tabs {
     width: 100%;
   }
-  .tab-content p.intro a, .tab-content p.intro a:hover, .tab-content p.intro a:visited, .tab-content p.intro a:active,
+  /*.tab-content p.intro a, .tab-content p.intro a:hover, .tab-content p.intro a:visited, .tab-content p.intro a:active,
   .tab-content .in-out a, .tab-content .in-out a:hover, .tab-content .in-out a:visited, .tab-content .in-out a:active {
     color: #333 !important;
     text-decoration: none;
     pointer-events: none;
-  }
+  }*/
 }
 
 .share-text {
   font-size: 14px;
 }
+
+@media (max-width: 450px) {
+  .tabs-container .nav-tabs>li>a {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 350px) {
+  .tabs-container .nav-tabs>li>a {
+    font-size: 12px;
+  }
   .share-text, .share-buttons .btn, .sources-button {
     font-size: 12px;
   }
@@ -354,10 +412,10 @@ a:visited {
   padding: 10px;
 }
 @media (max-width: 550px) {
-  .dropdown-menu {
-    margin-left: -109px;
-    max-width: 95vw;
-    width: 95vw;
+  .share-buttons .factogram .dropdown-menu {
+    margin-left: -69px;
+    max-width: 91vw;
+    width: 91vw;
   }
 }
 .dropdown-menu .input-group {

@@ -20,7 +20,6 @@ fs.readdir(__dirname + '/public/img/generate', function(err, files) {
 
 
 
-
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
@@ -86,7 +85,16 @@ app.get('/cards/:author/:image/:text', function(request, response) {
 });
 
 app.get('/issues', function(request, response) {
-  response.render('pages/issues1', { imageFiles : imageFiles });
+
+  var MobileDetect = require('mobile-detect'),
+      md = new MobileDetect(request.headers['user-agent']);
+      if (md.mobile() == null && md.tablet() == null) {
+        var touchscreen = false;
+      } else {
+        var touchscreen = true;
+      }
+
+  response.render('pages/issues1', { imageFiles : imageFiles, touchscreen : touchscreen });
 });
 
 app.get('/quiz', function(request, response) {

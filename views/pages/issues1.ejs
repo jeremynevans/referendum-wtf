@@ -3,8 +3,8 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.2.min.css" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/image-picker.css" />
-  <% include ../partials/header.ejs %>
   <script type="text/javascript" src="/js/jquery.mobile-1.4.2.min.js"></script>
+  <% include ../partials/header.ejs %>
   <script src="/js/doctop.min.js"></script>
   <script src="/js/archieml.js"></script>
   <script src="/js/backupData1.js"></script>
@@ -59,7 +59,15 @@
 </div>
 <div class="explaain-container">
   <div class="explaain-box">
-    <iframe id="explaain" frameborder="0" style="height: 100%; width: 100%" src="https://explaain-landing-referendum.herokuapp.com/demo/"></iframe>
+    <div class="explaain-box-header">
+      <button type="button" onclick="toggleExplaain(false)" class="btn btn-default explaain-close"><i class="fa fa-close" aria-hidden="true"></i> Close Cards</button>
+      <a href="http://explaain.com/" target="_blank">
+        <div class="logo">
+          <img class="explaain-header-logo" src="https://explaain-landing-referendum.herokuapp.com/demo/logo.png">
+        </div>
+      </a>
+    </div>
+    <iframe id="explaain" frameborder="0" style="height: 100%; width: 100%" src="https://explaain-landing-referendum.herokuapp.com/demo/?touchscreen=<%= touchscreen %>"></iframe>
   </div>
 </div>
 

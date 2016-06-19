@@ -1,5 +1,6 @@
 var myData;
 var notLoaded = true;
+var showingExplaain = false;
 
 $.doctop({
   url: 'https://docs.google.com/document/d/15oMHuBNX4CTMvaAm7piTaWVwpc8kaO0bDLg190p5Qdc/pub',
@@ -66,7 +67,7 @@ var getFactogramCreator = function(fact) {
   var button =    ''
                   + ' <span class="share-text">Share: </span>'
                   + ' <div class="btn-group share-buttons" role="group">'
-                  + '   <div class="btn-group dropdown" role="group">'
+                  + '   <div class="btn-group dropdown factogram" role="group">'
                   + '     <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
                   + '       <i class="fa fa-external-link-square" aria-hidden="true"></i> Factogram'
                   + '     </button>'
@@ -90,7 +91,7 @@ var getFactogramCreator = function(fact) {
                   + '       </div>'
                   + '     </ul>'
                   + '   </div>'
-                  + '   <div class="btn-group" role="group">'
+                  + '   <div class="btn-group post" role="group">'
                   + '     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
                   + '       <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Post'
                   + '     </button>'
@@ -205,6 +206,7 @@ setTimeout(function() {
 
 
 $('body').on('click', '.tab-content a:not(.subsection-heading)', function() {
+  toggleExplaain(true);
   var key = $(this).attr('href').split('#')[1];
   console.log(key);
   try {
@@ -228,4 +230,21 @@ $(document).scroll(function() {
   } else {
     $('.explaain-container').removeClass('sticky');
   }
+});
+
+
+var toggleExplaain = function(show) {
+  if (show == undefined) {
+    show = !showingExplaain;
+  }
+  if (show) {
+    $('.explaain-container').fadeIn(400);
+  } else {
+    $('.explaain-container').fadeOut(300);
+  }
+}
+
+$('button.explaain-close').on('click', function() {
+  console.log('hi');
+  toggleExplaain(false);
 });
