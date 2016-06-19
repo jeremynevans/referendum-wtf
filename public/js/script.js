@@ -64,8 +64,8 @@ var getPanelHTML = function(i, data) {
 
 var getFactogramCreator = function(fact) {
   var button =    ''
-                  + ' <span style="font-size:14px;">Share:&nbsp;&nbsp;</span>'
-                  + ' <div class="btn-group" role="group">'
+                  + ' <span class="share-text">Share: </span>'
+                  + ' <div class="btn-group share-buttons" role="group">'
                   + '   <div class="btn-group dropdown" role="group">'
                   + '     <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
                   + '       <i class="fa fa-external-link-square" aria-hidden="true"></i> Factogram'
@@ -103,7 +103,7 @@ var getFactogramCreator = function(fact) {
                   + '     </ul>'
                   + '   </div>'
                   + ' </div>'
-                  + ' <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Get sources"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></button>'
+                  + ' <button type="button" class="btn btn-default sources-button" data-toggle="tooltip" data-placement="bottom" title="Get sources"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></button>'
   return button;
 }
 

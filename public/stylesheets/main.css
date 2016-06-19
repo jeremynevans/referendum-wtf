@@ -180,11 +180,11 @@ a:visited {
           font-weight: 900;
           color: #003399; }
         .tabs .tab-content .in-out > div > ul {
-          padding-left: 30px; }
+          padding-left: 0; }
           .tabs .tab-content .in-out > div > ul > li {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             display: block; }
-            .tabs .tab-content .in-out > div > ul > li:before {
+            /*.tabs .tab-content .in-out > div > ul > li:before {
               /*Using a Bootstrap glyphicon as the bullet point*/
               content: "\20ac";
               font-family: 'Glyphicons Halflings';
@@ -192,7 +192,7 @@ a:visited {
               float: left;
               margin-top: 4px;
               margin-left: -22px;
-              color: #003399; }
+              color: #003399; }*/
 
 .mc-layout__modalContent, iframe {
     border-radius: 8px; }
@@ -337,6 +337,17 @@ a:visited {
   }
 }
 
+.share-text {
+  font-size: 14px;
+}
+@media (max-width: 350px) {
+  .share-text, .share-buttons .btn, .sources-button {
+    font-size: 12px;
+  }
+}
+.share-buttons {
+  margin-left: 3px;
+}
 .dropdown-menu {
   width: 462px;
   max-width: 75vw;
