@@ -101,9 +101,9 @@ var getFactogramCreator = function(fact) {
                   + '     </button>'
                   + '     <ul class="dropdown-menu" style="padding: 0; border: none; background: none; box-shadow: none;">'
                   + '       <div class="btn-group-vertical" role="group" aria-label="...">'
-                  + '         <button type="button" class="btn btn-default"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button>'
-                  + '         <button type="button" class="btn btn-default"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button>'
-                  + '         <button type="button" class="btn btn-default"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</button>'
+                  + '         <button type="button" class="btn btn-default" onclick="socialPost(\'twitter\', $(this))"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</button>'
+                  + '         <button type="button" class="btn btn-default" onclick="socialPost(\'facebook\', $(this))"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button>'
+                  + '         <button type="button" class="btn btn-default" onclick="socialPost(\'email\', $(this))"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</button>'
                   + '       </div>'
                   + '     </ul>'
                   + '   </div>'
@@ -121,6 +121,24 @@ var openFactogram = function(thisButton) {
   var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
   var text = thisButton.closest('li.bulletFact').find('div.body > p').text();
   var url = '/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
+  window.open(url,'_blank');
+}
+var socialPost = function(platform, thisButton) {
+  var name = thisButton.closest('.dropdown-menu').find('input.userName').val() || 'Captain';
+  var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
+  var text = thisButton.closest('li.bulletFact').find('div.body > p').text();
+  var url = ''; // '/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
+  switch (platform) {
+    case 'twitter':
+      url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Fact: ') + encodeURIComponent(text) + encodeURIComponent(' (From Referendum.wtf)') + '&source=webclient';
+      break;
+    case 'facebook':
+      url = 'https://www.facebook.com/sharer/sharer.php?u=referendum.wtf';
+      break;
+    case 'email':
+      url = 'mailto:?subject=' + encodeURIComponent('One fact about Brexit you should know') + '&body=' + encodeURIComponent('Hello! Here\'s a fact I found that might interest you: ') + encodeURIComponent(text);
+      break;
+  }
   window.open(url,'_blank');
 }
 
