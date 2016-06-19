@@ -12,21 +12,20 @@ $.doctop({
       console.log(myData);
       getAllPanelsHTML(myData);
       $("select").imagepicker();
-      // var myWidth = $('ul.thumbnails').width() * 1.05;
       $('ul.thumbnails').masonry({
         itemSelector: 'ul.thumbnails li',
-        // columnWidth: myWidth
       });
       $('.dropdown > ul').on('click', function(e) {
         e.stopPropagation();
       });
       $('.dropdown').on('shown.bs.dropdown', function () {
-        // var myWidth = $('ul.thumbnails').width() * 1.05;
         $('ul.thumbnails').masonry({
           itemSelector: 'ul.thumbnails li',
-          // columnWidth: myWidth
         });
       });
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
     }
   }
 });
@@ -103,14 +102,8 @@ var getFactogramCreator = function(fact) {
                   + '       </div>'
                   + '     </ul>'
                   + '   </div>'
-                  // + '   <div class="btn-group dropdown dropdown-post" role="group">'
-                  // + '     <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
-                  // + '     </button>'
-                  // + '     <ul class="dropdown-menu" aria-labelledby="dLabel">'
-                  // + '       Hello'
-                  // + '     </ul>'
-                  // + '   </div>'
-                  + ' </div>';
+                  + ' </div>'
+                  + ' <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Get sources"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></button>'
   return button;
 }
 
