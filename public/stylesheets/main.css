@@ -278,6 +278,11 @@ a:visited {
   height: 100%;
   background: #eee;
 }
+.explaain-header-logo {
+  display: block;
+  width: 70%;
+  margin: 30px auto 0;
+}
 
 .landing-video {
   border: 2px solid #ffcc01;
