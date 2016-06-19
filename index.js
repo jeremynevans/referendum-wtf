@@ -97,6 +97,19 @@ app.get('/issues', function(request, response) {
   response.render('pages/issues1', { imageFiles : imageFiles, touchscreen : touchscreen });
 });
 
+app.get('/press-release', function(request, response) {
+
+  var MobileDetect = require('mobile-detect'),
+      md = new MobileDetect(request.headers['user-agent']);
+      if (md.mobile() == null && md.tablet() == null) {
+        var touchscreen = false;
+      } else {
+        var touchscreen = true;
+      }
+
+  response.render('pages/press-release', { imageFiles : imageFiles, touchscreen : touchscreen });
+});
+
 app.get('/quiz', function(request, response) {
   response.render('pages/quiz');
 });

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.2.min.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/image-picker.css" />
+  <script type="text/javascript" src="/js/jquery.mobile-1.4.2.min.js"></script>
+  <% include ../partials/header.ejs %>
+  <script src="/js/doctop.min.js"></script>
+  <script src="/js/archieml.js"></script>
+  <script src="/js/backupData1.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script src="/js/image-picker.min.js"></script>
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+<div class="jumbotron text-center issues">
+  <div class="container">
+    <h1>
+      <img src="/img/eu-wtf-small.jpg" class="issues-icon">
+      <div class="span" style="color:#ffcc01; font-weight: 900;">Press Release</div>
+      <img src="/img/eu-wtf-small.jpg" class="issues-icon">
+    </h1>
+  </div>
+</div>
+
+<div class="tabs-container">
+  <div class="tabs tabs-desktop-only">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#site" aria-controls="site" role="tab" data-toggle="tab" onclick="_gs('event', 'Me Tab (Desktop)')">What It Is</a></li>
+      <li role="presentation"><a href="#who" aria-controls="who" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">Who We Are</a></li>
+      <li role="presentation"><a href="#how" aria-controls="how" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">How It's Made</a></li>
+      <!-- <li role="presentation"><a href="#power1" aria-controls="power1" role="tab" data-toggle="tab" onclick="_gs('event', 'Power Tab (Desktop)')">The EU and Power</a></li>
+      <li role="presentation"><a href="#borders1" aria-controls="borders1" role="tab" data-toggle="tab" onclick="_gs('event', 'Borders Tab (Desktop)')">The EU and Borders</a></li> -->
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="site">
+        <p>
+          Referendum.WTF is a simple, neutral, hyperbole-sifting website which brings the EU Referendum back to reality - created by <a href="#0">Jonny Bottomley</a> (founder of <a href="#1">Whip</a>) and <a href="#2">Jeremy Evans</a> (founder of <a href="#3">Explaain</a>, Forbes 30 under 30)
+        </p>
+        <p>
+          Our young team is driven to help voters make an informed decision. This Thursday, Britain will hold the most important vote in at least half a century, with implications lasting 50 years, not five. But, much of the debate has been neither informative nor enlightening.
+        </p>
+        <p>
+          We realised people, including us, were being turned off by:
+        </p>
+        <ul>
+          <li>
+            <b>The tyranny of information</b> - there's an overwhelming amount of information being thrown at us every day, and it's impossible to keep track of it all
+          </li>
+          <li>
+            <b>How much of it is spin, dressed as fact</b> - with so many claims being thrown about it seems impossible to know who to believe
+          </li>
+        </ul>
+        <p>
+          So we created Referendum.wtf, which takes elements of both Whip and Explaain: breaking down info into an <b>easy to understand synopsis</b> and <b>encouraging participation in politics</b>.
+        </p>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+        <p>
+
+        </p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="who">
+        Who we are
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="how">
+        How it's made
+      </div>
+      <!-- <div role="tabpanel" class="tab-pane fade" id="power1">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="borders1">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div> -->
+    </div>
+
+  </div>
+
+
+</div>
+<div class="explaain-container">
+  <div class="explaain-box">
+    <div class="explaain-box-header">
+      <button type="button" onclick="toggleExplaain(false)" class="btn btn-default explaain-close"><i class="fa fa-close" aria-hidden="true"></i> Close Cards</button>
+      <a href="http://explaain.com/" target="_blank">
+        <div class="logo">
+          <img class="explaain-header-logo" src="https://explaain-landing-referendum.herokuapp.com/demo/logo.png">
+        </div>
+      </a>
+    </div>
+    <iframe id="explaain" frameborder="0" style="height: 100%; width: 100%" src="https://explaain-landing-referendum.herokuapp.com/demo/?source=pressrelease&touchscreen=<%= touchscreen %>"></iframe>
+  </div>
+</div>
+
+
+<div class="tabs-container">
+	<div data-role="tabs" id="tabs" class="tabs tabs-mobile-only">
+	  <div data-role="navbar">
+	    <ul>
+	      <li aria-selected="true"><a class="ui-link ui-btn ui-tabs-anchor ui-btn-active" href="#me" data-ajax="false" onclick="_gs('event', 'Me Tab (Mobile)')">The EU and Me</a></li>
+	      <li><a href="#money" data-ajax="false" onclick="_gs('event', 'Money Tab (Mobile)')">The EU and Money</a></li>
+	      <li><a href="#power" data-ajax="false" onclick="_gs('event', 'Power Tab (Mobile)')">The EU and Power</a></li>
+	      <li><a href="#borders" data-ajax="false" onclick="_gs('event', 'Borders Tab (Mobile)')">The EU and Borders</a></li>
+	    </ul>
+	  </div>
+
+
+    <div class="tab-content">
+  	  <div id="me" class="ui-body-d tab-pane">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+  	  </div>
+  	  <div id="money">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+  	  </div>
+  	  <div id="power">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+  	  </div>
+  	  <div id="borders">
+        <div class="loading"><img src="/img/loading1.gif"></div>
+      </div>
+    </div>
+	</div>
+</div>
+
+  <div class="friends-container">
+    <div class="well">
+      <h3>Share the love - say hi to our friends...</h3>
+      <div>
+        <a href="http://votebusters.org/" target="_blank" onclick="_gs('event', 'Outbound: Votebusters')"><img src="/img/friends/votebusters.png" style="max-height: 140px;"></a>
+        <a href="http://wtfisbrexit.com/" target="_blank" onclick="_gs('event', 'Outbound: WTFisBrexit')"><img src="/img/friends/wtfisbrexit.png"></a>
+        <a href="http://leaveorstay.co.uk/" target="_blank" onclick="_gs('event', 'Outbound: LeaveOrStay')"><img src="/img/friends/leaveorstay.png"></a>
+        <a href="http://takepart.london" target="_blank" onclick="_gs('event', 'Outbound: TakePart')"><img src="/img/friends/takepart.png"></a>
+        <a href="https://electionmate.hackeurope.uk/" target="_blank" onclick="_gs('event', 'Outbound: ElectionMate')"><img src="/img/friends/electionmate.png"></a>
+        <a href="https://smashthevote.uk/" target="_blank" onclick="_gs('event', 'Outbound: SmashTheVote')"><img src="/img/friends/smashthevote.png"></a>
+        <!-- <a href="https://represent.me/eu/" target="_blank" onclick="_gs('event', 'Outbound: Represent')"><img src="/img/friends/represent.png"></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-573cf6f2f42c4d24"></script>
+
+  <script src="//my.hellobar.com/e3b6de8dcc397c2a51a92a223961f0e15a415058.js" type="text/javascript" charset="utf-8" async="async"></script>
+
+
+  <script>
+    !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+    arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+    d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+    insertBefore(d,q)}(window,document,'script','_gs');
+
+    _gs('GSN-878072-A');
+  </script>
+
+  <script>
+    setTimeout(function() {
+      // $('#myModal').modal()
+    },2000);
+  </script>
+
+</body>
+</html>
