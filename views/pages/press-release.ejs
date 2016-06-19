@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.2.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.2.min.css" /> -->
   <link rel="stylesheet" type="text/css" href="/stylesheets/image-picker.css" />
-  <script type="text/javascript" src="/js/jquery.mobile-1.4.2.min.js"></script>
+  <!-- <script type="text/javascript" src="/js/jquery.mobile-1.4.2.min.js"></script> -->
   <% include ../partials/header.ejs %>
   <script src="/js/doctop.min.js"></script>
   <script src="/js/archieml.js"></script>
@@ -31,9 +31,9 @@
   <div class="tabs tabs-desktop-only">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#site" aria-controls="site" role="tab" data-toggle="tab" onclick="_gs('event', 'Me Tab (Desktop)')">What It Is</a></li>
-      <li role="presentation"><a href="#who" aria-controls="who" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">Who We Are</a></li>
-      <li role="presentation"><a href="#how" aria-controls="how" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">How It's Made</a></li>
+      <li style="max-width:33.33%;" role="presentation" class="active"><a href="#site" aria-controls="site" role="tab" data-toggle="tab" onclick="_gs('event', 'Me Tab (Desktop)')">What It Is</a></li>
+      <li style="max-width:33.33%;" role="presentation"><a href="#how" aria-controls="how" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">How It Works</a></li>
+      <li style="max-width:33.33%;" role="presentation"><a href="#who" aria-controls="who" role="tab" data-toggle="tab" onclick="_gs('event', 'Money Tab (Desktop)')">Who We Are</a></li>
       <!-- <li role="presentation"><a href="#power1" aria-controls="power1" role="tab" data-toggle="tab" onclick="_gs('event', 'Power Tab (Desktop)')">The EU and Power</a></li>
       <li role="presentation"><a href="#borders1" aria-controls="borders1" role="tab" data-toggle="tab" onclick="_gs('event', 'Borders Tab (Desktop)')">The EU and Borders</a></li> -->
     </ul>
@@ -42,7 +42,7 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="site">
         <p>
-          Referendum.WTF is a simple, neutral, hyperbole-sifting website which brings the EU Referendum back to reality - created by <a href="#0">Jonny Bottomley</a> (founder of <a href="#1">Whip</a>) and <a href="#2">Jeremy Evans</a> (founder of <a href="#3">Explaain</a>, Forbes 30 under 30)
+          <a href="#4">Referendum.wtf</a> is a simple, neutral, hyperbole-sifting website which brings the EU Referendum back to reality - created by <a href="#0">Jonny Bottomley</a> (founder of <a href="#1">Whip</a>) and <a href="#2">Jeremy Evans</a> (founder of <a href="#3">Explaain</a>, Forbes 30 under 30)
         </p>
         <p>
           Our young team is driven to help voters make an informed decision. This Thursday, Britain will hold the most important vote in at least half a century, with implications lasting 50 years, not five. But, much of the debate has been neither informative nor enlightening.
@@ -59,23 +59,34 @@
           </li>
         </ul>
         <p>
-          So we created Referendum.wtf, which takes elements of both Whip and Explaain: breaking down info into an <b>easy to understand synopsis</b> and <b>encouraging participation in politics</b>.
+          So we created Referendum.wtf, which takes elements of both Whip and Explaain: breaking down info into an <a href="#6">easy to understand synopsis</a> and <a href="#9">encouraging participation in politics</a>.
         </p>
+        <p>
+          Here's cofounder Jeremy Evans talking to London Live about the site and how it came about:
+        </p>
+        <div class="landing-video" style="max-width: 480px; max-height: 270px;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuESZpimyUw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen style="max-width: 480px; max-height: 270px;"></iframe>
+        </div>
         <p>
 
         </p>
         <p>
 
         </p>
-        <p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="how">
+        <p><b>Simple - Cut the Crap</b></p>
+        <p>The site offers a simple, neutral breakdown of the arguments on both sides of the debate. But we’ve gone through the arguments, on both sides, removed the claims which don’t stand up to reasonable scrutiny and placed them in a red herrings section - which debunks these arguments. </p>
 
-        </p>
+        <p>The site is interactive, so to explore the details or interrogate our facts, you can just click to delve down into the issues through an explaain bar - which gives further information on issues people care about by breaking down the key elements into short soundbites and linking them together in an intutive manner.</p>
+
+        <p><b>……..And it's full of emojis!</b> 💡 👌 💪 ✌ 👊</p>
+        <p>"We realised that the more the campaigners claim to be giving us 'the facts', the more people don't know who to trust and end up switching off entirely." Jeremy Evans</p>
+        <p>"If you strip out all the spin then the actual facts are really not that overwhelming. You can learn loads in a couple of minutes - you can read it while you're on the loo." Jeremy Evans</p>
+        <p>“It’s time to be truthful about the EU referendum, know one truly knows what will happen, its a best guess game - however, what we can do is remove the bullshit.” Jonny Bottomley</p>
       </div>
       <div role="tabpanel" class="tab-pane fade in" id="who">
         Who we are
-      </div>
-      <div role="tabpanel" class="tab-pane fade in" id="how">
-        How it's made
       </div>
       <!-- <div role="tabpanel" class="tab-pane fade" id="power1">
         <div class="loading"><img src="/img/loading1.gif"></div>
