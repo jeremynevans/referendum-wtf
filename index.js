@@ -7,10 +7,11 @@ var client = new ImgixClient({
   secureURLToken: "KuKMWSurQr6lFYsX"
 });
 
-
+var imageFiles = [];
 var fs = require('fs');
 fs.readdir(__dirname + '/public/img/generate', function(err, files) {
     if (err) return;
+    imageFiles = files;
     files.forEach(function(f) {
         console.log('Files: ' + f);
     });
@@ -85,7 +86,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
 });
 
 app.get('/issues', function(request, response) {
-  response.render('pages/issues1');
+  response.render('pages/issues1', { imageFiles : imageFiles });
 });
 
 app.get('/quiz', function(request, response) {
