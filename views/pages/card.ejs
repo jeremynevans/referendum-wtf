@@ -47,12 +47,12 @@
 
 <body>
   <div class="card">
-    <p>Here's your Factogram, <%= author %>:</p>
+    <h3>Here's your Factogram, <%= author %>!</h3>
     <img src="<%= imageUrl %>" alt="<%= text %>">
     <a target="_blank" href="<%= tweet %>" class="btn btn-lg btn-default">
       <i class="fa fa-twitter" aria-hidden="true"></i> Tweet-o-gram
     </a>
-    <button class="btn btn-lg btn-default fb-button">
+    <button class="btn btn-lg btn-default ig-button">
       <i class="fa fa-facebook" aria-hidden="true"></i> Factbook
     </button>
     <button class="btn btn-lg btn-default ig-button">
@@ -65,11 +65,8 @@
   <script>
 
     $(".fb-button").on("click",function(){
-      var blob = $('#instaImage').imageBlob('image/jpeg').blob()
-      u = URL.createObjectURL(blob);
-      // u='<%= imageUrl %>';
-      t='<%= text %>';
-      window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
+        var fbpopup = window.open("https://www.facebook.com/sharer/sharer.php?u=<%= cardUrl %>", "pop", "width=600, height=400, scrollbars=no");
+        return false;
     });
 
     $('.ig-button').click(function()

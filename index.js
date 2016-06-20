@@ -51,7 +51,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     w: 650
   });
 
-  var blendWatermark = '/img/watermark.png';
+  var blendWatermark = 'http://referendum.wtf/img/watermark.png';
 
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,

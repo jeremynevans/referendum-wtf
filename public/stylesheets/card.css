@@ -7,7 +7,7 @@ body {
 .card {
   max-width: 600px;
   margin: 40px auto;
-  padding: 6vw;
+  padding: 4vw 6vw;
   border: 1px solid #003399;
   border-radius: 8px;
   background: #f8f8f8;
