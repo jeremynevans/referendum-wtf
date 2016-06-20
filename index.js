@@ -11,10 +11,12 @@ var imageFiles = [];
 var fs = require('fs');
 fs.readdir(__dirname + '/public/img/generate', function(err, files) {
     if (err) return;
-    imageFiles = files;
-    files.forEach(function(f) {
-        console.log('Files: ' + f);
+    imageFiles = '';
+    files.forEach(function(f, i) {
+      imageFiles = imageFiles + '"' + f + '", ';
+      console.log('Files: ' + f);
     });
+    imageFiles = '[' + imageFiles + ']';
 });
 
 

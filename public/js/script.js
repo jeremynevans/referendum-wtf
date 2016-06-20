@@ -67,6 +67,12 @@ var getPanelHTML = function(i, data) {
   return panelHTML;
 };
 
+// var getImageFiles = function() {
+//   imageFiles = $.grep(imageFiles, function( n, i ) {
+//     return ( n[0] != '.' );
+//   });
+// }
+
 var getFactogramCreator = function(fact) {
   var button =    ''
                   + ' <span class="share-text">Share: </span>'
