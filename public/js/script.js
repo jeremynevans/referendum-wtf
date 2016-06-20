@@ -162,7 +162,7 @@ var getSubsectionHTML = function(data, desktop) {
   var intro = boldify(data.intro[0].value);
   var inOut = getSubsectionInOutHTML(data, desktop);
   var comingsoon = '<div class="coming-soon"><h3>⌛ This section is coming&nbsp;soon..! ⌛</h3><h4>🙈 🙉 🙊 Don\'t miss out on getting involved - <b>help us</b> 📝 <b>write this section</b>! 📨 Email <a href="mailto:FOMO@referendum.wtf">FOMO@referendum.wtf</a></h4></div>'
-  data.comingsoon = true; //temporary
+  // data.comingsoon = true; //temporary
   var content = data.comingsoon ? comingsoon : '<p class="intro">' + intro + '</p>' + inOut;
   // var firstBit = i==0 ? ' in active' : '';
   var panelHTML = '<div class="panel panel-default"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + data.id + desktop + '"prices" aria-expanded="false" aria-controls="collapse' + data.id + desktop + '" class="collapsed subsection-heading"><div class="panel-heading" role="tab" id="heading' + data.id + desktop + '"><h4 class="panel-title">' + data.title[0].value + '</h4></div> <div id="collapse' + data.id + desktop + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + data.id + desktop + '"></a><div class="panel-body">' + content + '</div></div></div>';
@@ -177,10 +177,10 @@ var getSubsectionInOutHTML = function(data) {
   var inHTML = '';
   var outHTML = '';
   $.each(data.in, function(i, e) {
-    inHTML += '<li>' + boldify(e.bullet) + '</li>';
+    inHTML += '<li>' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</li>';
   });
   $.each(data.out, function(i, e) {
-    outHTML += '<li>' + boldify(e.bullet) + '</li>';
+    outHTML += '<li>' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</li>';
   });
   inHTML = '<div class="in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
   outHTML = '<div class="out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
@@ -231,18 +231,23 @@ $('body').on('click', '.tab-content a:not(.subsection-heading)', function() {
   toggleExplaain(true);
   var key = $(this).attr('href').split('#')[1];
   console.log(key);
-  try {
-         // Post message to the preview pane to let it now saving worked
-         if (window.frames['explaain'].postMessage) {
-           // e.g. Safari
-           window.frames['explaain'].postMessage({ action: 'open', id: key }, "*");
-         } else if (window.frames['explaain'].contentWindow.postMessage) {
-           // e.g. Chrome, Firefox
-           window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: key }, "*");
-         }
-       } catch (e) {
-         console.log(e);
-       }
+  if (isNaN(key[0])) {
+    $('.collapse').collapse('hide');
+    $('#' + key).collapse('show');
+  } else {
+    try {
+      // Post message to the preview pane to let it now saving worked
+      if (window.frames['explaain'].postMessage) {
+        // e.g. Safari
+        window.frames['explaain'].postMessage({ action: 'open', id: key }, "*");
+      } else if (window.frames['explaain'].contentWindow.postMessage) {
+        // e.g. Chrome, Firefox
+        window.frames['explaain'].contentWindow.postMessage({ action: 'open', id: key }, "*");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
 });
 
 $('.explaain-container').css('height', $(window).height());

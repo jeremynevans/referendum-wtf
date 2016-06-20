@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+
   <title><%= author %>'s Factogram</title>
 
   <!-- CSS -->
@@ -14,13 +14,13 @@
 
   <!-- icon -->
   <link rel="icon" type="image/png" href="/img/eu-wtf-circle.png">
-  
+
   <!-- JS -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <!-- <script src="/js/jquery.js"></script> -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="/js/jquery-image-blob.min.js"></script>
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@referendum_wtf">
@@ -38,7 +38,7 @@
   <!-- <meta property="og:image"         content="http://referendum-wtf-develop.herokuapp.com/img/generate/nigel.jpg"> -->
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="380">
-  
+
   <!-- Not sure what these are for? -->
   <!-- <link rel="image_src" type="image/jpeg" href="<%= imageUrl %>" /> -->
   <!-- <link rel="image_src" type="image/jpeg" href="http://referendum-wtf-develop.herokuapp.com/img/generate/nigel.jpg" /> -->
@@ -63,10 +63,11 @@
   <img id="instaImage" crossOrigin="Anonymous" src="<%= imageUrl %>" style="display:none;">
 
   <script>
-  
+
     $(".fb-button").on("click",function(){
-        var fbpopup = window.open("https://www.facebook.com/sharer/sharer.php?u=<%= cardUrl %>", "pop", "width=600, height=400, scrollbars=no");
-        return false;
+      u=<%= imageUrl %>;
+      t=<%= text %>;
+      window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
     });
 
     $('.ig-button').click(function()
