@@ -3,7 +3,7 @@ body {
   background: #eee;
 }
 section {
-  padding: 5vw;
+  padding: 0 5vw;
 }
 .card {
   max-width: 600px;
@@ -47,6 +47,6 @@ section {
         margin: auto;
     }
     .navbar-nav>li {
-       float: none; 
+       float: none;
     }
   }
