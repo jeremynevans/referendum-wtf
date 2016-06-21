@@ -43,7 +43,7 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
   var text = 'FACT: ' + request.params.text;
   var author = request.params.author.replace(/[^a-zA-Z0-9\.]/g, '');
   var side = request.params.side.replace(/[^a-zA-Z0-9\.]/g, '');
-  side = (side=='0') ? '' : "I back #" + side;
+  side = (side=='0') ? '' : "I Back #" + side;
 
   //   Security!!!
 
@@ -84,6 +84,41 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
     h: 380
   });
 
+  var factMarkIG = client.buildURL("/~text", {
+    txt64: text,
+    txtfont: 'avenir-black',
+    txtalign: 'center',
+    txtclr: 'fff',
+    txtsize: 48,
+    txtlead: 0,
+    txtpad: 15,
+    bg: '66000000',
+    w: 650
+  });
+
+  var imageUrlIG = client.buildURL("/" + image, {
+    mark: factMarkIG,
+    markalign: 'center,middle',
+    txt: side,
+    txtfont: 'avenir-black',
+    txtalign: 'top, center',
+    txtsize: 70,
+    txtclr: 'ffcc01',
+    txtline: 1,
+    txtlineclr: '000',
+    txtpad: 40,
+    txtshad: 6,
+    fit: 'crop',
+    blend64: blendWatermark,
+    bw: 800,
+    ba: 'bottom, center',
+    balph: 100,
+    bm: 'normal',
+    // exp: '-3',
+    w: 800,
+    h: 800
+  });
+
 
   var cloudinary = require('cloudinary');
   cloudinary.config({
@@ -96,7 +131,7 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
     var cardUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
     var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf!%20%23BrexitOrBromance%3F%20Choose%20your%20allegiance...%20' + encodeURIComponent(cardUrl) + '&source=webclient';
 
-    response.render('pages/card', { cardUrl: cardUrl, imageUrl: imageUrl, text: text, author: author, tweet: tweet });
+    response.render('pages/card', { cardUrl: cardUrl, imageUrl: imageUrl, imageUrlIG: imageUrlIG, text: text, author: author, tweet: tweet });
   });
 
 
