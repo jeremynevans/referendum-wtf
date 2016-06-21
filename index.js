@@ -91,7 +91,7 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
     api_key: '233772981662372',
     api_secret: '5rzlTR49Sc7e5CsVdQ7_uPFWWp8'
   });
-  cloudinary.uploader.upload("http://referendum.wtf/img/generate/boris2.jpg", function(result) {
+  cloudinary.uploader.upload(imageUrl, function(result) {
     console.log(result)
   });
 
