@@ -34,6 +34,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/cards/:author/:image/:text', function(request, response) {
+  response.redirect('/cards/' + request.params.author + '/0/' + request.params.image + '/' + request.params.text);
+});
+
 app.get('/cards/:author/:side/:image/:text', function(request, response) {
   var image = request.params.image.replace(/[^a-z0-9\.]/g, '');
   var text = 'FACT: ' + request.params.text;
