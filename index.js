@@ -92,7 +92,7 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
     api_secret: '5rzlTR49Sc7e5CsVdQ7_uPFWWp8'
   });
   cloudinary.uploader.upload(imageUrl, function(result) {
-    console.log(result)
+    imageUrl = result;
   });
 
 
