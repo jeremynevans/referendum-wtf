@@ -85,6 +85,18 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
   });
 
 
+  var cloudinary = require('cloudinary');
+  cloudinary.config({
+    cloud_name: 'diihpmlbp',
+    api_key: '233772981662372',
+    api_secret: '5rzlTR49Sc7e5CsVdQ7_uPFWWp8'
+  });
+  cloudinary.uploader.upload("http://referendum.wtf/img/generate/boris2.jpg", function(result) {
+    console.log(result)
+  });
+
+
+
   // var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf%21%20' + encodeURIComponent('http://referendum.wtf/cards/' + encodeURIComponent(author) + '/' + image + '/' + encodeURIComponent(text)) + '&source=webclient';
 
   // console.log(blendWatermark);
