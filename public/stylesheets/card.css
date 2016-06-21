@@ -1,9 +1,10 @@
 body {
-  padding: 5vw;
   text-align: center;
   background: #eee;
 }
-
+section {
+  padding: 5vw;
+}
 .card {
   max-width: 600px;
   margin: 40px auto;
@@ -13,9 +14,39 @@ body {
   background: #f8f8f8;
 }
 
+.card h3 {
+  font-weight: 600;
+  color: #003399;
+}
+
 .card img {
   display: block;
   max-width: 100%;
   margin: 20px auto 25px;
   border-radius: 8px;
 }
+
+
+.btn-primary {
+  background: #003399;
+  color: #ffcc01; }
+  .btn-primary:hover {
+    background: #ffcc01;
+    color: #003399; }
+
+
+    @media (max-width: 450px) {
+      .mobile-hide {
+        display: none;
+      }
+    }
+
+  @media (min-width: 768px) {
+    .navbar-nav {
+        float: none !important;
+        margin: auto;
+    }
+    .navbar-nav>li {
+       float: none; 
+    }
+  }

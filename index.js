@@ -85,7 +85,7 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
 
   // console.log(blendWatermark);
   var cardUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
-  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf%21%20' + encodeURIComponent(cardUrl) + '&source=webclient';
+  var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf!%20%23BrexitOrBromance%3F%20Choose%20your%20allegiance...%20' + encodeURIComponent(cardUrl) + '&source=webclient';
 
   response.render('pages/card', { cardUrl: cardUrl, imageUrl: imageUrl, text: text, author: author, tweet: tweet });
 

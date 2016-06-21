@@ -46,20 +46,26 @@
 </head>
 
 <body>
-  <div class="card">
-    <h3>Here's your Factogram, <%= author %>!</h3>
-    <img src="<%= imageUrl %>" alt="<%= text %>">
-    <a target="_blank" href="<%= tweet %>" class="btn btn-lg btn-default">
-      <i class="fa fa-twitter" aria-hidden="true"></i> Tweet-o-gram
-    </a>
-    <button class="btn btn-lg btn-default ig-button">
-      <i class="fa fa-facebook" aria-hidden="true"></i> Factbook
-    </button>
-    <button class="btn btn-lg btn-default ig-button">
-      <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
-    </button>
-  </div>
-
+  <% include ../partials/nav.ejs %>
+  <section>
+    <div class="card">
+      <h3>Check out <%= author %>'s Factogram!</h3>
+      <img src="<%= imageUrl %>" alt="<%= text %>">
+      <a target="_blank" href="http://referendum.wtf/issues" class="btn btn-lg btn-primary btn-block">
+        <i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp;&nbsp;Create your own<span class="mobile-hide"> Factogram here</span>
+      </a>
+      <br>
+      <a target="_blank" href="<%= tweet %>" class="btn btn-lg btn-default">
+        <i class="fa fa-twitter" aria-hidden="true"></i> Tweet-o-gram
+      </a>
+      <button class="btn btn-lg btn-default ig-button">
+        <i class="fa fa-facebook" aria-hidden="true"></i> Factbook
+      </button>
+      <button class="btn btn-lg btn-default ig-button">
+        <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
+      </button>
+    </div>
+  </section>
   <img id="instaImage" crossOrigin="Anonymous" src="<%= imageUrl %>" style="display:none;">
 
   <script>
