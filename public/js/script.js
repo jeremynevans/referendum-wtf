@@ -170,8 +170,8 @@ var getInOutHTML = function(data) {
   $.each(data.out, function(i, e) {
     outHTML += '<li class="bulletFact"><div class="body">' + boldify(e.bullet) + '</div>' + getFactogramCreator(e.bullet) + '</li>';
   });
-  inHTML = '<div class="in-out-side in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
-  outHTML = '<div class="in-out-side out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
+  inHTML = '<div class="in-out-side in"><h3>Pro In:</h3><ul>' + inHTML + '</ul></div>';
+  outHTML = '<div class="in-out-side out"><h3>Pro Out:</h3><ul>' + outHTML + '</ul></div>';
   inOutHTML = '<div class="in-out">' + inHTML + outHTML + '</div>';
   return inOutHTML;
 };
@@ -200,8 +200,8 @@ var getSubsectionInOutHTML = function(data) {
   $.each(data.out, function(i, e) {
     outHTML += '<li>' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</li>';
   });
-  inHTML = '<div class="in-out-side in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
-  outHTML = '<div class="in-out-side out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
+  inHTML = '<div class="in-out-side in"><h3>Pro In:</h3><ul>' + inHTML + '</ul></div>';
+  outHTML = '<div class="in-out-side out"><h3>Pro Out:</h3><ul>' + outHTML + '</ul></div>';
   inOutHTML = '<div class="in-out">' + inHTML + outHTML + '</div>';
   return inOutHTML;
 };
