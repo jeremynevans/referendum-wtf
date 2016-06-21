@@ -34,10 +34,12 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/cards/:author/:image/:text', function(request, response) {
+app.get('/cards/:author/:side/:image/:text', function(request, response) {
   var image = request.params.image.replace(/[^a-z0-9\.]/g, '');
-  var text = request.params.text;
+  var text = 'FACT: ' + request.params.text;
   var author = request.params.author.replace(/[^a-zA-Z0-9\.]/g, '');
+  var side = request.params.side.replace(/[^a-zA-Z0-9\.]/g, '');
+  side = (side=='0') ? '' : "I back #" + side;
 
   //   Security!!!
 
@@ -46,7 +48,7 @@ app.get('/cards/:author/:image/:text', function(request, response) {
     txtfont: 'avenir-black',
     txtalign: 'center',
     txtclr: 'fff',
-    txtsize: 32,
+    txtsize: 30,
     txtlead: 0,
     txtpad: 15,
     bg: '66000000',
@@ -58,12 +60,15 @@ app.get('/cards/:author/:image/:text', function(request, response) {
   var imageUrl = client.buildURL("/" + image, {
     mark: factMark,
     markalign: 'center,middle',
-    // txt: author + '`s Factogram:',
-    // txtalign: 'top, center',
-    // txtsize: 24,
-    // txtclr: 'fff',
-    // txtpad: 30,
-    // txtshad: 10,
+    txt: side,
+    txtfont: 'avenir-black',
+    txtalign: 'top, center',
+    txtsize: 48,
+    txtclr: 'ffcc01',
+    txtline: 1,
+    txtlineclr: '000',
+    txtpad: 40,
+    txtshad: 6,
     fit: 'crop',
     blend64: blendWatermark,
     bw: 800,

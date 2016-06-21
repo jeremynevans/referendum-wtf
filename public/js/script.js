@@ -88,6 +88,12 @@ var getFactogramCreator = function(fact) {
                   + '           <button class="btn btn-default openFactogram" onclick="openFactogram($(this));">Create<span class="mobile-hide"> Your Factogram</span>!</button>'
                   + '         </span>'
                   + '       </div>'
+                  + '       <div class="side-checkbox"><input type="checkbox" checked id="side"> State my allegiance!</div>'
+                  // + '       <div class="btn-group" role="group" aria-label="...">'
+                  // + '         <button type="button" class="btn btn-default" onclick="socialPost(\'twitter\', $(this))">None</button>'
+                  // + '         <button type="button" class="btn btn-default" onclick="socialPost(\'facebook\', $(this))"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</button>'
+                  // + '         <button type="button" class="btn btn-default" onclick="socialPost(\'email\', $(this))"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</button>'
+                  // + '       </div>'
                   + '       <div class="thumbnails-container">'
                   + '         <select class="imageSelect">'
                   + '           <option data-img-src="/img/generate/boris2.jpg" value="boris2.jpg">boris2.jpg</option>'
@@ -126,7 +132,9 @@ var openFactogram = function(thisButton) {
   var name = thisButton.closest('.dropdown-menu').find('input.userName').val() || 'Captain';
   var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
   var text = thisButton.closest('li.bulletFact').find('div.body > p').text();
-  var url = '/cards/' + encodeURIComponent(name) + '/' + image + '/' + encodeURIComponent(text);
+  var side = thisButton.closest('.in-out-side').hasClass('in') ? 'Bromance' : 'Brexit';
+  side = thisButton.closest('.dropdown-menu').find('input#side').is(':checked') ? side : '0';
+  var url = '/cards/' + encodeURIComponent(name) + '/' + side + '/' + image + '/' + encodeURIComponent(text);
   window.open(url,'_blank');
 }
 var socialPost = function(platform, thisButton) {
@@ -158,8 +166,8 @@ var getInOutHTML = function(data) {
   $.each(data.out, function(i, e) {
     outHTML += '<li class="bulletFact"><div class="body">' + boldify(e.bullet) + '</div>' + getFactogramCreator(e.bullet) + '</li>';
   });
-  inHTML = '<div class="in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
-  outHTML = '<div class="out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
+  inHTML = '<div class="in-out-side in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
+  outHTML = '<div class="in-out-side out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
   inOutHTML = '<div class="in-out">' + inHTML + outHTML + '</div>';
   return inOutHTML;
 };
@@ -188,8 +196,8 @@ var getSubsectionInOutHTML = function(data) {
   $.each(data.out, function(i, e) {
     outHTML += '<li>' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</li>';
   });
-  inHTML = '<div class="in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
-  outHTML = '<div class="out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
+  inHTML = '<div class="in-out-side in"><h3>In</h3><ul>' + inHTML + '</ul></div>';
+  outHTML = '<div class="in-out-side out"><h3>Out</h3><ul>' + outHTML + '</ul></div>';
   inOutHTML = '<div class="in-out">' + inHTML + outHTML + '</div>';
   return inOutHTML;
 };
