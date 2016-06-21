@@ -17,6 +17,7 @@
 
   <!-- JS -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/js/jquery.js"></script>
   <!-- <script src="/js/jquery.js"></script> -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="/js/jquery-image-blob.min.js"></script>
@@ -48,6 +49,37 @@
 
 </head>
 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Instagramming is so unbelievably easy</h4>
+      </div>
+      <div class="modal-body">
+        <h3>1. Click the Instafact link below</h3>
+        <p>Not yet! You haven't read instructions 2 and 3...!</p>
+        <h3>2. Save to your device</h3>
+        <p>Hold down on the image and tap Save Image - the picture will be saved to your photos.</p>
+        <h3>3. Upload to Instagram!</h3>
+        <p>You guessed it - via the app! Easy as that.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-lg btn-default ig-button">
+          <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <body>
   <% include ../partials/nav.ejs %>
   <section>
@@ -64,7 +96,7 @@
       <button class="btn btn-lg btn-default fb-button">
         <i class="fa fa-facebook" aria-hidden="true"></i> Factbook
       </button>
-      <button class="btn btn-lg btn-default ig-button">
+      <button class="btn btn-lg btn-default" id="ig-btn">
         <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
       </button>
     </div>
@@ -76,6 +108,10 @@
     $(".fb-button").on("click",function(){
         var fbpopup = window.open("https://www.facebook.com/sharer/sharer.php?u=<%= cardUrl %>", "pop", "width=600, height=400, scrollbars=no");
         return false;
+    });
+
+    $("#ig-btn").on("click",function(){
+      $('#myModal').modal();
     });
 
     $('.ig-button').click(function()
