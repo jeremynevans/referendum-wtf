@@ -447,6 +447,12 @@ ul.thumbnails.image_picker_selector li .thumbnail.selected {
   background: #2277dd;
 }
 
+.bullet-options {
+  background: white;
+  color: #003399;
+  z-index: 10;
+  font-weight: 600;
+}
 
 .bullet-options i {
   /*color: #003399;*/

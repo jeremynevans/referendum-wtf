@@ -78,7 +78,7 @@ var getFactogramCreator = function(fact) {
                   + ' <span class="share-text">Share: </span>'
                   + ' <div class="btn-group share-buttons" role="group">'
                   + '   <div class="btn-group dropdown factogram" role="group">'
-                  + '     <button class="btn btn-default bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+                  + '     <button class="btn btn-primary bullet-options" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
                   + '       <i class="fa fa-external-link-square" aria-hidden="true"></i> Factogram'
                   + '     </button>'
                   + '     <ul class="dropdown-menu" aria-labelledby="dLabel">'
