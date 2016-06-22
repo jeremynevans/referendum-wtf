@@ -129,7 +129,7 @@ app.get('/cards/:author/:side/:image/:text', function(request, response) {
   cloudinary.uploader.upload(imageUrl, function(result) {
     imageUrl = result.url;
     var cardUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
-    var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf!%20%23BrexitOrBromance%3F%20Choose%20your%20allegiance...%20' + encodeURIComponent(cardUrl) + '&source=webclient';
+    var tweet = 'https://twitter.com/intent/tweet?text=I%20just%20made%20an%20EU%20Factogram%20on%20Referendum.wtf!%20%23BrexitOrBromance%3F%20Choose%20your%20allegiance...%20%23EUref%20' + encodeURIComponent(cardUrl) + '&source=webclient';
 
     response.render('pages/card', { cardUrl: cardUrl, imageUrl: imageUrl, imageUrlIG: imageUrlIG, text: text, author: author, tweet: tweet });
   });
