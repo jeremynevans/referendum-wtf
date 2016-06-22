@@ -50,10 +50,36 @@
 </head>
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Tweeting is so unbelievably easy</h4>
+      </div>
+      <div class="modal-body">
+        <h3>1. Click the Twitter button below</h3>
+        <p>Not yet! You haven't read instructions 2 and 3...!</p>
+        <h3>2. Ignore the gobbledygook!</h3>
+        <p>It may not look like it, but once you've posted it, your tweet will look beautiful!</p>
+        <h3>3. Edit and Tweet</h3>
+        <p>Add your own personal touch to the message (be careful not to edit the Factogram link itself) and hit the big blue button!</p>
+
+      </div>
+      <div class="modal-footer">
+        <a target="_blank" href="<%= tweet %>" style="border: 1px solid #1da1f2; color: #1da1f2; font-weight: 500" class="btn btn-lg btn-default" onclick="_gs('event', 'Factogram Tweet-o-gram')">
+          <i class="fa fa-twitter" aria-hidden="true"></i> Tweet-o-gram
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -61,7 +87,7 @@
         <h4 class="modal-title" id="myModalLabel">Instagramming is so unbelievably easy</h4>
       </div>
       <div class="modal-body">
-        <h3>1. Click the Instafact link below</h3>
+        <h3>1. Click the Instafact button below</h3>
         <p>Not yet! You haven't read instructions 2 and 3...!</p>
         <h3>2. Save to your device</h3>
         <p>Hold down on the image and tap Save Image - the picture will be saved to your photos.</p>
@@ -70,7 +96,7 @@
 
       </div>
       <div class="modal-footer">
-        <button class="btn btn-lg btn-default ig-button">
+        <button class="btn btn-lg btn-default ig-button" style="border: 1px solid #fb3958; color: #fb3958; font-weight: 500">
           <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
         </button>
       </div>
@@ -90,13 +116,13 @@
         <i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp;&nbsp;Create your own<span class="mobile-hide"> Factogram here</span>
       </a>
       <br>
-      <button class="btn btn-lg btn-default fb-button" style="border: 2px solid #003399; color: #003399; font-weight: 600" onclick="_gs('event', 'Factogram Factbook')">
+      <button class="btn btn-lg btn-default fb-button" style="border: 1px solid #003399; color: #003399; font-weight: 500" onclick="_gs('event', 'Factogram Factbook')">
         <i class="fa fa-facebook" aria-hidden="true"></i> Factbook
       </button>
-      <a target="_blank" href="<%= tweet %>" class="btn btn-lg btn-default" onclick="_gs('event', 'Factogram Tweet-o-gram')">
+      <button id="tw-btn" target="_blank" style="border: 1px solid #1da1f2; color: #1da1f2; font-weight: 500" class="btn btn-lg btn-default" onclick="_gs('event', 'Factogram Tweet-o-gram')">
         <i class="fa fa-twitter" aria-hidden="true"></i> Tweet-o-gram
-      </a>
-      <button class="btn btn-lg btn-default" id="ig-btn" onclick="_gs('event', 'Factogram Instafact')">
+      </button>
+      <button class="btn btn-lg btn-default" style="border: 1px solid #fb3958; color: #fb3958; font-weight: 500" id="ig-btn" onclick="_gs('event', 'Factogram Instafact')">
         <i class="fa fa-instagram" aria-hidden="true"></i> Instafact
       </button>
     </div>
@@ -110,8 +136,12 @@
         return false;
     });
 
-    $("#ig-btn").on("click",function(){
+    $("#tw-btn").on("click",function(){
       $('#myModal').modal();
+    });
+
+    $("#ig-btn").on("click",function(){
+      $('#myModal1').modal();
     });
 
     $('.ig-button').click(function()
