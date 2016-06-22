@@ -109,7 +109,7 @@ var getFactogramCreator = function(fact) {
                   + '           <option data-img-src="/img/generate/campaign3.jpg" value="campaign3.jpg">campaign3.jpg</option>'
                   + '           <option data-img-src="/img/generate/angelae1.jpg" value="angelae1.jpg">angelae1.jpg</option>'
                   + '           <option data-img-src="/img/generate/boris3.jpg" value="boris3.jpg">boris3.jpg</option>'
-                  + '           <option data-img-src="/img/generate/christine2.jpg" value="christine2.jpg">christine2.jpg</option>'
+                  + '           <option data-img-src="/img/generate/christine.jpg" value="christine.jpg">christine.jpg</option>'
                   + '           <option data-img-src="/img/generate/gordon.jpg" value="gordon.jpg">gordon.jpg</option>'
                   + '           <option data-img-src="/img/generate/campaign1.jpg" value="campaign1.jpg">campaign1.jpg</option>'
                   + '           <option data-img-src="/img/generate/george.jpg" value="george.jpg">george.jpg</option>'
