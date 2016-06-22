@@ -200,6 +200,9 @@ var getSubsectionHTML = function(data, desktop) {
   // var panelHTML = '<p>' + intro + inOut + '</p>';
   // $('#subsection-' + data.id + '1').html(panelHTML);
   // $('#subsection-' + data.id).html(panelHTML);
+  if (data.hide) {
+    panelHTML = '';
+  }
   return panelHTML;
 }
 
