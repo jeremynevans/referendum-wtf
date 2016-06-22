@@ -149,6 +149,8 @@ var openFactogram = function(thisButton) {
   var name = thisButton.closest('.dropdown-menu').find('input.userName').val() || 'Captain';
   var image = thisButton.closest('.dropdown-menu').find('select.imageSelect').val() || 'boris2.jpg';
   var text = thisButton.closest('li.bulletFact').find('div.body > p').text();
+  console.log(thisButton.closest('li.bulletFact'));
+  console.log(text);
   var side = thisButton.closest('.in-out-side').hasClass('in') ? 'Bromance' : 'Brexit';
   side = thisButton.closest('.dropdown-menu').find('input#side').is(':checked') ? side : '0';
   var url = '/cards/' + encodeURIComponent(name) + '/' + side + '/' + image + '/' + encodeURIComponent(text);
@@ -211,10 +213,10 @@ var getSubsectionInOutHTML = function(data) {
   var inHTML = '';
   var outHTML = '';
   $.each(data.in, function(i, e) {
-    inHTML += '<li>' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</li>';
+    inHTML += '<li class="bulletFact"><div class="body">' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</div></li>';
   });
   $.each(data.out, function(i, e) {
-    outHTML += '<li>' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</li>';
+    outHTML += '<li class="bulletFact"><div class="body">' + boldify(e.bullet) + getFactogramCreator(e.bullet) + '</div></li>';
   });
   inHTML = '<div class="in-out-side in"><h3>Pro In:</h3><ul>' + inHTML + '</ul></div>';
   outHTML = '<div class="in-out-side out"><h3>Pro Out:</h3><ul>' + outHTML + '</ul></div>';
