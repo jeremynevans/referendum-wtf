@@ -1,0 +1,914 @@
+var backupMyData = 
+[
+  {
+    "id":"me",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"The EU and Me"
+  }
+],
+"intro":
+[
+  {
+    "type":"text",
+    "value":"EU citizens can 🏠 *live and *🏢* work* in any other EU country, and are affected by the <a href=\"#29\">EU’s rules on the 💰 *</a><a href=\"#29\">price and *🔧* quality*</a><a href=\"#29\"> of things</a> like travel, healthcare, energy and phone tariffs."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"✈ ♻ **Free movement:** <a href=\"#31\">Around </a><a href=\"#31\">*1.3 million Brits *🌴* live abroad*</a><a href=\"#31\"> in the EU</a>, and having membership <a href=\"#32\">*makes travel easier*</a><a href=\"#32\">.</a>",
+    "sources":[]
+  },
+  {
+    "bullet":"💷 ⬆**Prices would rise:** *<a href=\"#43\">Flights</a>, <a href=\"#44\">energy</a> and *📱<a href=\"#45\">* phone tariffs*</a> are all at risk of going up in price if we leave the EU.",
+    "sources":[]
+  },
+  {
+    "bullet":"💪 👥 **Deal-making power:** The EU negotiates 💡 <a href=\"#42\">energy deals </a>as a <a href=\"#39\">large, supposedly </a><a href=\"#39\">*stronger, bloc*</a><a href=\"#39\">.</a>",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"🙊 💬 **Limited power:** The UK Government <a href=\"#52\">can only do so much to </a><a href=\"#52\">🚷* reduce immigration*</a> due to the rules of being in the EU.",
+    "sources":[]
+  },
+  {
+    "bullet":"🐌 🔀 **Slow to change:** The UK 🆕 🚫 *can’t change certain legislation* without it going through the EU, which often ⏳ takes longer <a href=\"#49\">like the infamous tampon tax</a>.",
+    "sources":[]
+  },
+  {
+    "bullet":"💡 👌 **Energy independent:** <a href=\"#48\">Most of our </a><a href=\"#48\">💨 *gas imports come from Norway*</a> – Britain is not dependent on Russia.",
+    "sources":[]
+  }
+],
+"redherrings":"Claims that EU migration has an *impact on the number of jobs for Brits*, or that it *affects wages*, <a href=\"http://blogs.channel4.com/factcheck/factcheck-eu-immigration/23016\">have little hard evidence</a>.",
+    "subsections":
+[
+  {
+    "id":"prices",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"What prices will this affect for me?"
+  }
+],
+"intro":
+[
+  {
+    "type":"text",
+    "value":"The EU’s single market 〽 regulates various aspects of trade such as 💷 price, quality and competition, and there is debate over whether this makes 🏠 households better or worse off."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"🔄 📲 **Mobile Roaming:** The EU recently *capped* 📱 *mobile roaming charges* and will  *extend this to a complete* 🚫 *ban on additional roaming fees* in April 2017.",
+    "sources":[]
+  },
+  {
+    "bullet":"⬆ **Rise in Prices:** A number of economists think consumer prices would likely ⤴ rise if Britain left the EU.",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://blogs.channel4.com/factcheck/factcheck-eu-raise-prices/22854\">http://blogs.channel4.com/factcheck/factcheck-eu-raise-prices/22854</a>"}]
+  },
+  {
+    "bullet":"✈ 👌 **Budget travel:** Flight prices could rise if we left the EU: we could be 📜 🔚 forced out of the cheap flights agreement or ⛽ ⬆ oil prices in pounds could rise, although these are both uncertain.",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36303467\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-36303467</a>"}]
+  }
+],
+"out":
+[
+  {
+    "bullet":"🔧 💳 **Control over VAT:** The UK is not always able to set its own VAT rates. Despite overruling the infamous <a href=\"#49\">tampon tax</a>, the ❎ 👎 UK cannot always prevent changes and there are also ⏳ time lags.",
+    "sources":
+[
+  {
+    "type":"http",
+    "value":"//www.bbc.co.uk/news/uk-politics-eu-referendum-36027205"}]
+  },
+  {
+    "bullet":"💨 🔥 **Cheaper Energy:** Energy prices could ⬇ fall if we leave the EU, if we chose to 🚫 remove the 5% VAT on energy that the EU enforces.",
+    "sources":[]}]
+  },
+  {
+    "id":"travel",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"What happens to my travel and freedoms?"
+  }
+],
+"intro":
+[
+  {
+    "type":"text",
+    "value":"🆓 🏃 **Free Movement:** EU membership offers  citizens the ✈ 🏠 *right to travel, live and work* in any EU member state, with automatic 🏥 *access to the healthcare and public services* of that country - this works for both EU citizens in the UK and vice versa."
+  },
+  {
+    "type":"sources",
+    "value":
+[
+  {
+    "type":"http",
+    "value":"//www.bbc.co.uk/news/uk-politics-eu-referendum-35806077"}]
+  }
+],
+"in":
+[
+  {
+    "bullet":"😰 ➡ 😅**No Visa, No Problem:** The EU provides UK citizens *cheaper* ✈ *flight tickets* (see <a href=\"#collapseprices1\">Prices section</a>) and ⛔ *no requirement to have a* 🎫 *visa* when *travelling within the EU.*",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36303467\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-36303467</a>"}]
+  },
+  {
+    "bullet":"😷 🚑 **Healthcare abroad:** When we visit EU countries we get the same 🏥 healthcare as locals due to having EHIC cards - we would likely have to 👥 renegotiate to be able to keep these if we left.",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.thetimes.co.uk/article/for-the-health-of-the-nhs-we-prescribe-a-vote-to-stay-in-europe-shs3dwzsb\">http://www.thetimes.co.uk/article/for-the-health-of-the-nhs-we-prescribe-a-vote-to-stay-in-europe-shs3dwzsb</a>"
+  },
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-35981015\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-35981015</a>"}]
+  },
+  {
+    "bullet":"**🌏 🏡 Moving abroad:** *1.3 million Britons live in other EU countries*, mostly ☀ Spain, Ireland & France - while they will probably be allowed to stay, rights for new migrants abroad are *not guaranteed*.",
+    "sources":
+[
+  {
+    "type":"http",
+    "value":"//www.bbc.co.uk/news/uk-politics-eu-referendum-35806077"}]
+  }
+],
+"out":
+[
+  {
+    "bullet":"🏯 👌 **UK expats safe:** Britons 🏠 ✅ living abroad are expected to be allowed to stay there in the event of a Brexit.",
+    "sources":[]
+  },
+  {
+    "bullet":"☀ 🌴 **Holidays in Europe:** Leaving the EU is unlikely to restrict ✈ 🚅 travel, since the importance of tourism means *deals will probably be renegotiated*",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-35806077\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-35806077</a>"}]}]
+  },
+  {
+    "id":"workersrights",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"What about my job and my rights?"
+  }
+],
+"hide":"true",
+    "comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"The first bullet for the Travel subsection,....",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"Some of the <a href=\"#56\">3 million (1 in 10) jobs that depend on EU trade</a> would be <a href=\"#58\">a bit more vulnerable if we left the EU</a>.",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"….First travel out bullet….",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]}]
+  },
+  {
+    "id":"money",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"The EU and Money"
+  }
+],
+"intro":
+[
+  {
+    "type":"text",
+    "value":"The UK pays around *£8.5bn in fees* to the EU each year (or £161m a week), once you discount the money we get straight back from the rebate and subsidies."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"💰 🎁 **Buying & Selling:** Britain is the <a href=\"#2\">*EU’s largest trading partner*</a> - over <a href=\"#1\">*40% of British exports*</a><a href=\"#1\"> go to the EU and over 50% of our products</a>  come from the EU.",
+    "sources":[]
+  },
+  {
+    "bullet":"📦 📜 **Trading rules:** Even after Brexit, Britain <a href=\"#6\">*may still have to comply with EU rules*</a> to trade with EU countries.",
+    "sources":[]
+  },
+  {
+    "bullet":"📉 🚧 **Slower growth:** If we left the EU an estimated <a href=\"#22\">*</a><a href=\"#22\">£36bn would be lost</a><a href=\"#22\"> per year</a><a href=\"#22\">*</a> due to <a href=\"#15\">slower growth</a> reducing the total tax paid to the Treasury.",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"💰 🎁 **Handing over cash:** We have <a href=\"#82\">paid around £380 billion to the EU since we joined in the 70s, adjusting for inflation</a> - this money could have been spent directly on British public services.",
+    "sources":[]
+  },
+  {
+    "bullet":"📜 💳 **Terms and conditions:** Much of the money we get straight back from the EU <a href=\"#81\">comes with instructions on how to spend it</a> - a Brexit would mean we can dictate where it goes.",
+    "sources":[]
+  },
+  {
+    "bullet":"🐾 🚸 **Trodden path:** Britain could <a href=\"#7\">*emulate countries like Norway or Switzerland*</a>, both prosperous and with a high standard-of-living, and *re-establish trade links* with EU states.",
+    "sources":[]
+  }
+],
+"redherrings":"Ignore any claims that we pay <a href=\"https://fullfact.org/europe/our-eu-membership-fee-55-million/\">£350m a week to the EU</a>, that <a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36085281\">our rebate could easily be reduced</a> and that <a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36456277\">pay towards bailing out countries like Greece</a> - they have *all been shown to be false or misleading*.",
+    "subsections":
+[
+  {
+    "id":"fees",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"How much do we pay the EU?"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"text",
+    "value":"It costs money to be in the EU, but it does also create trade, jobs and investment. The tradeoff between the cost and economic benefits has been hotly contested."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"🍰  💷 **Fraction of the Cost:**The net British contribution to the EU is just *0.6% of UK GDP*.  A fraction of the cost of the  🏥 *NHS*  which is forecast to be * £116.574 billion* in 2015/16.\n(... The  UK will lose *2.2% of GDP* by 2030 if it leaves the EU. )",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.nhsconfed.org/resources/key-statistics-on-the-nhs\">http://www.nhsconfed.org/resources/key-statistics-on-the-nhs</a>; <a href=\"http://openeurope.org.uk/intelligence/britain-and-the-eu/what-if-there-were-a-brexit/\">http://openeurope.org.uk/intelligence/britain-and-the-eu/what-if-there-were-a-brexit/</a>"}]
+  },
+  {
+    "bullet":"💳  💶 **Weekly Payments** The UK pays just over 💶  *£250 million per week* to the EU budget - including the reduction of contributions due to the rebate.",
+    "sources":[]
+  },
+  {
+    "bullet":"🔁  🔙 **The Rebate** The UK rebate is a system that provides the UK with a ↩ *refund* on a part of its contribution to the EU budget",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":".📆 💰 **Weekly fee:**Membership of the EU costs the UK taxpayers *£350 million a week* or *£250 million a week* when including the rebate. The UK ⛔  *cannot control* how to spend it.",
+    "sources":[]
+  },
+  {
+    "bullet":"\n🍭 📜  **EU Treaties:** The rebate is 🚫 *not* set in the EU treaties, it is <a href=\"#54\">negotiated *every seven years*</a> and must be <a href=\"#55\">*agreed by every EU member state including Britain</a>.*.",
+    "sources":[]
+  },
+  {
+    "bullet":"🔐 🚪 **Save Money:** Leaving the EU may result in  *immediate savings*, as we <a href=\"#53\">may no longer need to contribute to the EU budget</a>.",
+    "sources":[]}]
+  },
+  {
+    "id":"trade",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Trade"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"🏬 🚩 **Free Market:**Membership of the EU grants nations 💯 <a href=\"#60\">*f</a><a href=\"#60\">ull access to a huge common </a><a href=\"#60\">free</a><a href=\"#60\"> market</a><a href=\"#60\">*, including access to a *</a><a href=\"#60\">500 million</a><a href=\"#60\">* 🏃 *</a><a href=\"#60\">person</a><a href=\"#60\">* marketplace</a>.",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":" 🌍🇪🇺 ** Global Trade** The EU has ✅ *<a href=\"#72\">existing free trade agreements with 31 countries</a>*, whilst similar agreements are either ⏰ *awaiting ratification* or are 👍*provisionally in place* with another 50. Negotiations are ongoing <a href=\"#74\">between the EU and 🇺🇸 America</a>, 🇮🇳India, 🇧🇷 Latin America, 🇨🇫Central Africa and 🇯🇵Japan.",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]
+  },
+  {
+    "id":"investment",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Funding and Investment"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"text",
+    "value":"Investment is the commitment of money of capital to *purchase financial instruments* or other *assets* in order to *gain profitable returns*."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"   💣💸 **Risk on Funding** If the *UK decides to*  🏃*leave the EU and economic growth* 📉 *falls*, people would ❌ *no longer receive EU grants and other forms of funding* from the EU",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36527323\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-36527323</a>"
+  },
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36523764\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-36523764</a>"}]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]
+  },
+  {
+    "id":"jobs",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Jobs"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.nhsconfed.org/resources/key-statistics-on-the-nhs\">http://www.nhsconfed.org/resources/key-statistics-on-the-nhs</a>; <a href=\"http://openeurope.org.uk/intelligence/britain-and-the-eu/what-if-there-were-a-brexit/\">http://openeurope.org.uk/intelligence/britain-and-the-eu/what-if-there-were-a-brexit/</a>"}]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]
+  },
+  {
+    "id":"farming",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Farming"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"text",
+    "value":"….Farming intro….."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"...first farming In bullet….",
+    "sources":[]
+  },
+  {
+    "bullet":"The £3.87 billion EU CAP spend in the UK makes a  *greater contribution*  (around the £10 billion mark) than it costs 🇪🇺.  It generates £3.5 billion in tax revenues and employs  *350,000 people*  🏃🏃🏃.",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"https://www.cla.org.uk/sites/default/files/CLA_Leave_OR_Remain%20ReportFINAL.pdf\">https://www.cla.org.uk/sites/default/files/CLA_Leave_OR_Remain%20ReportFINAL.pdf</a>"}]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"*40% of EU spending* goes on the Common Agricultural Policy, with the <a href=\"#0\">*largest amount* going to the 🚜 🚜  largest farmers and agri-businesses</a>.  A free market could allocate resources 💰 differently.",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://m.heraldscotland.com/news/14339435.We_must_rid_ourselves_of_the_costly_failure_that_is_the_EU___s_Common_Agriculture_Policy/\">http://m.heraldscotland.com/news/14339435.We_must_rid_ourselves_of_the_costly_failure_that_is_the_EU___s_Common_Agriculture_Policy/</a>"
+  },
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.debatingeurope.eu/focus/arguments-for-and-against-the-common-agricultural-policy/#.V0C81pMrKL9\">http://www.debatingeurope.eu/focus/arguments-for-and-against-the-common-agricultural-policy/#.V0C81pMrKL9</a>"
+  },
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/world-europe-11216061\">http://www.bbc.co.uk/news/world-europe-11216061</a>"}]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]}]
+  },
+  {
+    "id":"power",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"The EU and Power"
+  }
+],
+"intro":
+[
+  {
+    "type":"text",
+    "value":"We join other European countries in *signing up to the rules* of being in the EU, affecting things like fishing waters, renewable energy policies, limits on workers’ hours per week."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"💪 👥 **Stronger in:** In a competitive, 🌍 *globalised world*  the UK needs to stay in the EU to *help shape laws* which affect the UK from the inside.",
+    "sources":[]
+  },
+  {
+    "bullet":"✌ 👊 **Double hit:** The *UK government’s 🇬🇧 * ability to influence policies occurs both in voting and in negotiations over the actual text of a draft law.",
+    "sources":
+[
+  {
+    "type":"https",
+    "value":"//fullfact.org/europe/eu-facts-behind-claims-uk-influence/"}]
+  },
+  {
+    "bullet":"💝 👍 **Helpful laws:** Many EU laws benefit the UK, for instance the new EU CAP will invest £22 billion over the next 7 years",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"💪 💬 **Big influence:** Between *10% and 55%* of UK laws and regulations 🌱  stem from the EU.",
+    "sources":
+[
+  {
+    "type":"https",
+    "value":"//fullfact.org/news/what-proportion-uk-law-comes-brussels/"}]
+  },
+  {
+    "bullet":"🙋 🚶 **Voted out:** In recent years the UK has been *on the losing side* of fighting EU laws, and now *loses a higher proportion of votes* than any other member.",
+    "sources":[]
+  },
+  {
+    "bullet":"⛔ 🚷 **Held back:** Open Europe estimates that the 100 most expensive EU regulations set back the UK economy by £27.4 billion a year.",
+    "sources":[]
+  }
+],
+"redherrings":"",
+    "subsections":
+[
+  {
+    "id":"lawmaking",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Lawmaking"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"🚮 📜 The UK government can *veto or vote against key issues* and maintains control over main decision-making",
+    "sources":
+[
+  {
+    "type":"text",
+    "value":"<a href=\"http://www.bbc.co.uk/news/uk-politics-eu-referendum-36247456\">http://www.bbc.co.uk/news/uk-politics-eu-referendum-36247456</a>"}]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]
+  },
+  {
+    "id":"influence",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Influence"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"text",
+    "value":"The EU is influenced by its institutions and member states. Each institution is different and conducts different tasks according to their role."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"🚦 👍 **A Go-Ahead To Reform:** The *EU has agreed to follow* 📝 *negotiations* set by the UK government, ☝ if the *UK decides to remain in the EU*",
+    "sources":
+[
+  {
+    "type":"http",
+    "value":"//openeurope.org.uk/today/blog/open-europe-responds-to-uk-eu-agreement/"}]
+  },
+  {
+    "bullet":"💪🏤 **Strength of elected MEPs:** Through the Lisbon Treaty 2007, the 🙋*MEP’s* the 👪 *EU citizens elected* were given *more power* over the decision making process",
+    "sources":
+[
+  {
+    "type":"https",
+    "value":"//fullfact.org/europe/will-european-elections-decide-whos-charge-europe/"}]
+  },
+  {
+    "bullet":"🏁🏆 **Winning-Side:** The UK has been on the 😅 *winning side of the vote* in the EU 😎 *95%* of the time",
+    "sources":
+[
+  {
+    "type":"https",
+    "value":"//fullfact.org/europe/eu-facts-behind-claims-uk-influence/"}]
+  }
+],
+"out":
+[
+  {
+    "bullet":"⛔ 📝 **Not Elected:** The *European Commission* is an 🔊 *influential and* 💪 *powerful body* within the EU that is *made up of* 🙉 *unelected members*",
+    "sources":
+[
+  {
+    "type":"https",
+    "value":"//fullfact.org/europe/eu-facts-behind-claims-brussels-bureaucrats/"}]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]}]
+  },
+  {
+    "id":"borders",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"The EU and Borders"
+  }
+],
+"intro":
+[
+  {
+    "type":"text",
+    "value":"Total 🔁 net migration to the UK is over *300,000 a year*, half of which is from the EU, while the government’s target is ⤵ under 100,000. EU citizens have the *right to live and work* in any member state."
+  },
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"✈ ✅ **Migrants benefit us:** EU citizens living in Britain  💸  *pay more in taxes than they receive in benefits* and the Remain side say they’re good for the economy.",
+    "sources":[]
+  },
+  {
+    "bullet":"🔧 🔩 **Tightening rules:** Benefits for new EU migrant workers will soon be *limited for the first four years*.",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"🔓 ⚠ **Lacking control:** Immigration can *only be controlled so much* when you’re an EU member",
+    "sources":[]
+  },
+  {
+    "bullet":"🚷 🚪 **Security risks:** The Schengen Area means someone crossing the channel could have entered Europe *from almost any bordering country*.",
+    "sources":[]
+  }
+],
+"redherrings":"",
+    "subsections":
+[
+  {
+    "id":"immigration",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Immigration"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]
+  },
+  {
+    "id":"defence",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Defence"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]
+  },
+  {
+    "id":"security",
+    "title":
+[
+  {
+    "type":"text",
+    "value":"Security"
+  }
+],
+"comingsoon":"true",
+    "intro":
+[
+  {
+    "type":"sources",
+    "value":[]
+  }
+],
+"in":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  }
+],
+"out":
+[
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]
+  },
+  {
+    "bullet":"",
+    "sources":[]}]}]}]

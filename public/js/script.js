@@ -8,10 +8,10 @@ $.doctop({
   cache: false,
   callback: function(d){
     if (notLoaded) {
-      notLoaded = false;
       myData = d.copy.archie.sections;
       console.log(myData);
       getAllPanelsHTML(myData);
+      notLoaded = false;
       $("select").imagepicker();
       $('ul.thumbnails').masonry({
         itemSelector: 'ul.thumbnails li',
