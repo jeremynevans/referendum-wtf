@@ -34,6 +34,10 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.get('/testing', function(request, response) {
+  response.render('pages/testing');
+});
+
 app.get('/cards/:author/:image/:text', function(request, response) {
   response.redirect('/cards/' + request.params.author + '/0/' + request.params.image + '/' + request.params.text);
 });
